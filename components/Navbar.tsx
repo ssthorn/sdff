@@ -1,117 +1,75 @@
-//components/Navbar.tsx
+// components/Navbar.tsx
+"use client";
+
 import Link from "next/link";
-// import { useIsMobile } from "@/hooks/use-mobile"
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
+import { NAV_GROUPS } from "./navConfig";
 
 export default function Navbar() {
-
-  // const isMobile = useIsMobile()
-
   return (
-      <NavigationMenu>
-        <NavigationMenuList className='flex-wrap'>
-          <NavigationMenuItem className='hidden md:block'>
-            <NavigationMenuTrigger>Film Festival</NavigationMenuTrigger>
-            <NavigationMenuContent>
-            <ul className="grid w-[200px] gap-4">
-              <li>
-                <NavigationMenuLink asChild>
-                  <Link href="#">Festival Info</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">Tickets</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">Film Program</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">History</Link>
-                </NavigationMenuLink><NavigationMenuLink asChild>
-                  <Link href="#">Submit Your Film</Link>
-                </NavigationMenuLink>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-          </NavigationMenuItem>
+    <nav className="flex items-center gap-6 text-xs lg:text-sm font-rowdies text-black ">
+      {NAV_GROUPS.map((group) => (
+        <div key={group.key} className="relative group">
+          {/* Main toolbar text: Rowdies Regular */}
+          <button
+            type="button"
+            className="uppercase font-normal  hover:underline"
+          >
+            {group.label}
+          </button>
 
-          <NavigationMenuItem className='hidden md:block'>
-            <NavigationMenuTrigger>Visit San Diego</NavigationMenuTrigger>
-            <NavigationMenuContent>
-            <ul className="grid w-[200px] gap-4">
-              <li>
-                <NavigationMenuLink asChild>
-                  <Link href="#">S.D. Tourism</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">Restaurants</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">Hotels & Lodging</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">Travel & Transport</Link>
-                </NavigationMenuLink>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem className='hidden md:block'>
-            <NavigationMenuTrigger>SD Film</NavigationMenuTrigger>
-            <NavigationMenuContent>
-            <ul className="grid w-[200px] gap-4">
-              <li>
-                <NavigationMenuLink asChild>
-                  <Link href="#">Mission</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">S.D. Cinemas</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">Film Awards</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">Press & Industry</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">Membership</Link>
-                </NavigationMenuLink>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem className='hidden md:block'>
-            <NavigationMenuTrigger>Submissions</NavigationMenuTrigger>
-            <NavigationMenuContent>
-            <ul className="grid w-[200px] gap-4">
-              <li>
-                <NavigationMenuLink asChild>
-                  <Link href="#">Submit Your Film</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">Screenplay Contest</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">Submission Guide</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">Festival Rules</Link>
-                </NavigationMenuLink>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
+          {/* Dropdown under trigger */}
+          <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity duration-150 absolute right-0 mt-2 min-w-[220px] bg-white text-black border border-black/10 shadow-lg py-2 z-20">
+            {group.links.map((item) =>
+              item.external ? (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block px-4 py-1.5 text-[11px] lg:text-xs font-light tracking-normal hover:bg-black/5"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="block px-4 py-1.5 text-[11px] lg:text-xs font-light tracking-normal hover:bg-black/5"
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
+          </div>
+        </div>
+      ))}
 
-      
+      {/* HOME */}
+      {/* <Link
+        href={HOME_LINK.href}
+        className="uppercase font-normal tracking-[0.18em] hover:underline"
+      >
+        {HOME_LINK.label}
+      </Link> */}
+
+      {/* SUBMIT pill */}
+      {/* {SUBMIT_CTA.external ? (
+        <a
+          href={SUBMIT_CTA.href}
+          target="_blank"
+          rel="noreferrer"
+          className="ml-2 rounded-full px-4 py-1 text-xs lg:text-sm font-[700] tracking-[0.16em] uppercase text-white bg-[#66ccff] hover:bg-[#00aaff] transition-colors"
+        >
+          {SUBMIT_CTA.label}
+        </a>
+      ) : (
+        <Link
+          href={SUBMIT_CTA.href}
+          className="ml-2 rounded-full px-4 py-1 text-xs lg:text-sm font-[700] tracking-[0.16em] uppercase text-white bg-[#66ccff] hover:bg-[#00aaff] transition-colors"
+        >
+          {SUBMIT_CTA.label}
+        </Link>
+      )} */}
+    </nav>
   );
 }
