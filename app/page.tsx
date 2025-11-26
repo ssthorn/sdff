@@ -12,7 +12,7 @@ type HomeTile = {
 const HOME_TILES: HomeTile[] = [
   {
     title: "About / Membership",
-    href: "/about",
+    href: "/mission",
     imageSrc:
       "/1d. HOME PAGE IMAGES (by section)/1. HP IMAGE About_Membership_/1.)  AboutMembership.PNG",
   },
@@ -30,7 +30,7 @@ const HOME_TILES: HomeTile[] = [
   },
   {
     title: "Film Guide",
-    href: "/filmguide",
+    href: "/filmprogram",
     imageSrc:
       "/1d. HOME PAGE IMAGES (by section)/4. HP IMAGE Film Guide/4.) Film Guide.jpg",
   },
@@ -42,13 +42,13 @@ const HOME_TILES: HomeTile[] = [
   },
   {
     title: "Submit",
-    href: "/submit",
+    href: "www.filmfreeway.com",
     imageSrc:
       "/1d. HOME PAGE IMAGES (by section)/6. HP IMAGE Submit/6.) Submit.jpg",
   },
   {
     title: "Venues",
-    href: "/venues",
+    href: "/cinema",
     imageSrc:
       "/1d. HOME PAGE IMAGES (by section)/7. HP IMAGE Venues_/7.) venues.jpg",
   },
@@ -66,7 +66,7 @@ const HOME_TILES: HomeTile[] = [
   },
   {
     title: "Lodging",
-    href: "/hotel",
+    href: "/hotels",
     imageSrc:
       "/1d. HOME PAGE IMAGES (by section)/10. HP IMAGE Lodging/10.) Lodging.png",
   },
@@ -78,7 +78,7 @@ const HOME_TILES: HomeTile[] = [
   },
   {
     title: "Press & Media",
-    href: "/media",
+    href: "/contact",
     imageSrc:
       "/1d. HOME PAGE IMAGES (by section)/12. HP IMAGE Press & Media/12.) Press_Media.jpg",
   },
