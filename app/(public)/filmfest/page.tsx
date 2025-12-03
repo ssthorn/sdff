@@ -17,7 +17,7 @@ export default function FilmFestPage() {
       {/* IMAGE 1 – SEATED GUESTS */}
       <section className="w-full">
         <div className="relative w-full max-w-5xl mx-auto">
-          <div className="relative w-full aspect-[16/9]">
+          <div className="relative w-full aspect-video">
             <Image
               src="/3. _filmfest IMAGES/1. filmfest Seated Guests.jpg"
               alt="Festival audience seated in a cinema"
@@ -94,7 +94,7 @@ export default function FilmFestPage() {
       {/* IMAGE 2 – BOTANICAL / BALBOA PARK */}
       <section className="w-full">
         <div className="relative w-full max-w-5xl mx-auto">
-          <div className="relative w-full aspect-[16/9]">
+          <div className="relative w-full aspect-video">
             <Image
               src="/3. _filmfest IMAGES/2. filmfest Botanical.JPG"
               alt="Balboa Park botanical building"
@@ -145,7 +145,7 @@ export default function FilmFestPage() {
       {/* IMAGE 3 – CORONADO */}
       <section className="w-full">
         <div className="relative w-full max-w-5xl mx-auto">
-          <div className="relative w-full aspect-[16/9]">
+          <div className="relative w-full aspect-video">
             <Image
               src="/3. _filmfest IMAGES/3. filmfest Coronado.JPG"
               alt="Coronado hotel and waterfront"

@@ -6,19 +6,30 @@ import { NAV_GROUPS } from "./navConfig";
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center gap-6 text-xs lg:text-sm font-rowdies text-black ">
+    <nav className="flex items-center gap-6 text-xs lg:text-sm font-rowdies text-black">
       {NAV_GROUPS.map((group) => (
         <div key={group.key} className="relative group">
           {/* Main toolbar text: Rowdies Regular */}
           <button
             type="button"
-            className="uppercase font-normal  hover:underline"
+            className="uppercase font-normal hover:underline"
           >
             {group.label}
           </button>
 
           {/* Dropdown under trigger */}
-          <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity duration-150 absolute right-0 mt-2 min-w-[220px] bg-white text-black border border-black/10 shadow-lg py-2 z-20">
+          <div
+            className="
+              absolute right-0 top-full mt-1
+              min-w-[220px]
+              bg-white text-black
+              border border-black/10 shadow-lg py-2
+              opacity-0 scale-95 pointer-events-none
+              group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
+              transition-all duration-150
+              z-30
+            "
+          >
             {group.links.map((item) =>
               item.external ? (
                 <a
@@ -43,33 +54,6 @@ export default function Navbar() {
           </div>
         </div>
       ))}
-
-      {/* HOME */}
-      {/* <Link
-        href={HOME_LINK.href}
-        className="uppercase font-normal tracking-[0.18em] hover:underline"
-      >
-        {HOME_LINK.label}
-      </Link> */}
-
-      {/* SUBMIT pill */}
-      {/* {SUBMIT_CTA.external ? (
-        <a
-          href={SUBMIT_CTA.href}
-          target="_blank"
-          rel="noreferrer"
-          className="ml-2 rounded-full px-4 py-1 text-xs lg:text-sm font-[700] tracking-[0.16em] uppercase text-white bg-[#66ccff] hover:bg-[#00aaff] transition-colors"
-        >
-          {SUBMIT_CTA.label}
-        </a>
-      ) : (
-        <Link
-          href={SUBMIT_CTA.href}
-          className="ml-2 rounded-full px-4 py-1 text-xs lg:text-sm font-[700] tracking-[0.16em] uppercase text-white bg-[#66ccff] hover:bg-[#00aaff] transition-colors"
-        >
-          {SUBMIT_CTA.label}
-        </Link>
-      )} */}
     </nav>
   );
 }
