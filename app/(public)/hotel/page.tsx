@@ -139,7 +139,7 @@ function HotelCard({ item, flip }: { item: HotelItem; flip?: boolean }) {
           </a>
 
           {/* Address */}
-          <div className="mt-2 text-[12px] leading-[1.25] text-black">
+          <div className="mt-2 text-[12px] leading-tight text-black">
             {item.addressLines.map((line) => (
               <div key={line}>{line}</div>
             ))}

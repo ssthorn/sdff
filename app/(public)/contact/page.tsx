@@ -156,7 +156,7 @@ export default function ContactPage() {
         {/* Big photo break */}
         <div className="mt-10 sm:mt-12">
           <div className="relative w-full overflow-hidden rounded-none border border-black/10">
-            <div className="relative aspect-[16/9] sm:aspect-[21/9]">
+            <div className="relative aspect-video sm:aspect-21/9">
               <Image
                 src="/contact/1. contact page new.jpg"
                 alt="Festival audience"

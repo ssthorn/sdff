@@ -106,11 +106,11 @@ export default function AwardsPage() {
           <p className="text-[11px] sm:text-xs">
             By The
             <br />
-            <span className="font-rowdies font-bold uppercase tracking-[0.1em]">
+            <span className="font-rowdies font-bold uppercase tracking-widest">
               San Diego Independent
             </span>
             <br />
-            <span className="font-rowdies font-bold uppercase tracking-[0.1em]">
+            <span className="font-rowdies font-bold uppercase tracking-widest">
               Cinema Society
             </span>
           </p>
@@ -180,7 +180,7 @@ export default function AwardsPage() {
             <LaurelLink
               filename={"sd laurels3.jpg"}
               alt="Best Actor"
-              className="h-auto w-[160px] sm:w-[200px]"
+              className="h-auto w-40 sm:w-[200px]"
               sizes="(min-width: 1024px) 200px, 45vw"
             />
           </div>
@@ -188,7 +188,7 @@ export default function AwardsPage() {
             <LaurelLink
               filename={"sd laurels4.jpg"}
               alt="Best Actress"
-              className="h-auto w-[160px] sm:w-[200px]"
+              className="h-auto w-40 sm:w-[200px]"
               sizes="(min-width: 1024px) 200px, 45vw"
             />
           </div>
@@ -306,7 +306,7 @@ export default function AwardsPage() {
           ].map((t) => (
             <p
               key={t}
-              className={`font-rowdies font-bold uppercase tracking-[0.1em] ${
+              className={`font-rowdies font-bold uppercase tracking-widest ${
                 t.startsWith("(")
                   ? "text-[11px] sm:text-xs text-black/70"
                   : "text-[#00aaff] text-[12px] sm:text-sm"
@@ -332,7 +332,7 @@ export default function AwardsPage() {
           {["(Worldwide)", "(UCSD)", "(SDSU)", "(USD)", "(SDCC)"].map((t) => (
             <p
               key={t}
-              className="font-rowdies font-bold uppercase tracking-[0.1em] text-[#00aaff] text-[12px] sm:text-sm"
+              className="font-rowdies font-bold uppercase tracking-widest text-[#00aaff] text-[12px] sm:text-sm"
             >
               BEST STUDENT FILM {t}
             </p>
@@ -386,7 +386,7 @@ export default function AwardsPage() {
           ].map((t) => (
             <p
               key={t}
-              className={`font-rowdies font-bold uppercase tracking-[0.1em] ${
+              className={`font-rowdies font-bold uppercase tracking-widest ${
                 t.startsWith("-")
                   ? "text-[11px] sm:text-xs text-black/70"
                   : "text-[#00aaff] text-[12px] sm:text-sm"

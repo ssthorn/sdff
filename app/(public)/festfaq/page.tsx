@@ -103,7 +103,7 @@ function FaqGroup({
         <h2 className="font-rowdies font-bold uppercase text-[#03ABFE] text-lg sm:text-xl tracking-[0.08em]">
           {title}
         </h2>
-        <div className="mt-2 h-[6px] w-[86%] max-w-[640px] mx-auto rounded-full bg-[#03ABFE]" />
+        <div className="mt-2 h-1.5 w-[86%] max-w-[640px] mx-auto rounded-full bg-[#03ABFE]" />
       </div>
 
       <div
