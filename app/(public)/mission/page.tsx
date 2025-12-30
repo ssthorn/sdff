@@ -6,8 +6,8 @@ export default function MissionPage() {
   return (
     <main className="bg-white pb-12">
       {/* TITLE BLOCK */}
-      <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10 pb-6">
-        <h1 className="font-rowdies uppercase leading-tight text-[#00aaff] text-3xl sm:text-4xl md:text-5xl">
+      <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-2 sm:pt-2 pb-2">
+        <h1 className="mx-[15vw] font-bold uppercase leading-tight text-[#00aaff] text-3xl sm:text-4xl md:text-5xl">
           <span className="block">San Diego</span>
           <span className="block">Independent Film</span>
           <span className="block text-black">Fest Mission</span>
@@ -29,11 +29,11 @@ export default function MissionPage() {
       </section>
 
       {/* ABOUT THE FESTIVAL */}
-      <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10 pb-4">
-        <h2 className="font-rowdies text-xl sm:text-2xl md:text-[1.6rem] uppercase text-black mb-3">
+      <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-4 sm:pt-10 pb-4">
+        <h2 className="font-bold text-center text-2xl sm:text-2xl md:text-4xl uppercase text-black mb-3">
           About the Festival
         </h2>
-        <div className="space-y-3 text-sm sm:text-base leading-relaxed">
+        <div className="space-y-2 text-sm sm:text-base leading-tight">
           <p>
             The San Diego Independent Film Festival was founded in 2016 out of
             a deeply held belief regarding cinema and its power to inspire,
@@ -84,13 +84,13 @@ export default function MissionPage() {
 
       {/* MEMBERSHIP / CINEMA SOCIETY */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-8 pb-4">
-        <h2 className="font-rowdies text-xl sm:text-2xl md:text-[1.6rem] uppercase text-[#00aaff] mb-1">
-          San Diego Independent Film Fest Membership
+        <h2 className="mx-6 font-bold uppercase leading-tight text-[#00aaff] text-4xl sm:text-4xl md:text-5xl mb-3">
+          San Diego Independent Film Fest <span className="text-black">Membership</span>
         </h2>
-        <h3 className="font-rowdies text-sm sm:text-base uppercase text-black mb-3">
+        <h3 className="mx-6 font-bold text-center text-2xl sm:text-2xl md:text-4xl uppercase text-black mb-3">
           Join the Cinema Society
         </h3>
-        <div className="space-y-3 text-sm sm:text-base leading-relaxed">
+        <div className="space-y-3 text-sm sm:text-base leading-tight">
           <p>
             We are grateful to be co-sponsored by the San Diego Independent Film
             Society.
@@ -136,13 +136,13 @@ export default function MissionPage() {
 
       {/* FESTIVAL NEWS / UPDATES */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-8 pb-4">
-        <h2 className="font-rowdies text-xl sm:text-2xl md:text-[1.6rem] uppercase text-[#00aaff] mb-1">
-          San Diego Independent Film Festival News
+        <h2 className="mx-6 font-bold uppercase leading-tight text-[#00aaff] text-4xl sm:text-4xl md:text-5xl mb-3">
+          San Diego Independent Film Festival  <span className="text-black">News</span>
         </h2>
-        <h3 className="font-rowdies text-sm sm:text-base uppercase text-black mb-3">
+        <h3 className="mx-6 font-bold text-center text-2xl sm:text-2xl md:text-4xl uppercase text-black mb-3">
           Festival Updates
         </h3>
-        <div className="space-y-3 text-sm sm:text-base leading-relaxed">
+        <div className="space-y-3 text-sm sm:text-base leading-tight">
           <p>
             The San Diego Independent Film Festival is excited to once again be
             hosting our award ceremony and several premiere screening events in
@@ -200,13 +200,13 @@ export default function MissionPage() {
 
       {/* CINEMAS */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-8 pb-4">
-        <h2 className="font-rowdies text-xl sm:text-2xl md:text-[1.6rem] uppercase text-[#00aaff] mb-1">
-          San Diego Independent Film Fest Cinemas
+        <h2 className="mx-6 font-bold uppercase leading-tight text-[#00aaff] text-4xl sm:text-4xl md:text-5xl mb-3">
+          San Diego Independent Film Fest <span className="text-black">Cinemas</span>
         </h2>
-        <h3 className="font-rowdies text-sm sm:text-base uppercase text-black mb-3">
+        <h3 className="mx-6 font-bold text-center text-2xl sm:text-2xl md:text-4xl uppercase text-black mb-3">
           San Diego Cinemas
         </h3>
-        <div className="space-y-3 text-sm sm:text-base leading-relaxed">
+        <div className="space-y-3 text-sm sm:text-base leading-tight">
           <p>San Diego offers an amazing array of cinemas.</p>
           <p>
             From multiplexes like the AMC theaters in Mission Valley and La
@@ -245,13 +245,13 @@ export default function MissionPage() {
 
       {/* SUBMISSIONS / FILMFREEWAY */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-8">
-        <h2 className="font-rowdies text-xl sm:text-2xl md:text-[1.6rem] uppercase text-[#00aaff] mb-1">
-          San Diego Independent Film Fest Submissions
+        <h2 className="mx-6 font-bold uppercase leading-tight text-[#00aaff] text-4xl sm:text-4xl md:text-5xl mb-3">
+          San Diego Independent Film Fest <span className="text-black">Submissions</span>
         </h2>
-        <h3 className="font-rowdies text-sm sm:text-base uppercase text-black mb-3">
+        <h3 className="mx-6 font-bold text-center text-2xl sm:text-2xl md:text-4xl uppercase text-black mb-3">
           Submit Your Project
         </h3>
-        <div className="space-y-3 text-sm sm:text-base leading-relaxed mb-6">
+        <div className="space-y-3 text-sm sm:text-base leading-tight mb-6">
           <p>
             <strong>Film Submissions:</strong> If you are interested in
             submitting a film to the festival, make sure to check out our
