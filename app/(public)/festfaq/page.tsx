@@ -493,7 +493,7 @@ export default function FestFaqPage() {
             a: (
               <p>
                 All film submissions must be made through the festival's <a
-            href="https://filmfreeway.com"
+            href="https://filmfreeway.com "
             target="_blank"
             rel="noreferrer"
             className="hover:underline"
