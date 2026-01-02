@@ -188,8 +188,9 @@ body {
 
   /* Section headings */
   .mission-h2 {
-    @apply font-rowdies font-light text-center uppercase text-black
-      text-2xl md:text-4xl mb-6;
+    @apply font-rowdies font-light uppercase text-black
+      text-2xl sm:text-3xl md:text-5xl
+      mb-2 text-center;
   }
 
   .mission-h2--inset {
@@ -309,16 +310,14 @@ body {
   }
   /* FilmFest: centered, narrow content column */
   .filmfest-section {
-    @apply mx-auto max-w-xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
   }
 
   /* FilmFest: centered headline (FESTIVAL NEWS etc) */
   .filmfest-h2 {
-    @apply text-center uppercase text-black
-      font-bold
-      tracking-wide
-      text-base sm:text-lg md:text-xl
-      mb-2;
+    @apply font-rowdies font-light uppercase text-black
+      text-2xl sm:text-3xl md:text-5xl
+      mb-2 text-center;
   }
 
   /* FilmFest: centered subhead (SAN DIEGO FILM SOCIETY / SUBMIT YOUR FILM) */

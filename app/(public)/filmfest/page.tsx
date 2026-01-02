@@ -117,7 +117,7 @@ export default function FilmFestPage() {
       </section>
 
       <section className="filmfest-section pb-6">
-        <h3 className="filmfest-h3">San Diego Film Society</h3>
+        <h2 className="filmfest-h2">San Diego Film Society</h2>
         <div className="filmfest-body">
           <p>
             The San Diego Independent Film Society currently hosts several
@@ -175,7 +175,7 @@ export default function FilmFestPage() {
       </section>
 
       <section className="filmfest-section pb-8">
-        <h3 className="filmfest-h3">Submit Your Film</h3>
+        <h2 className="filmfest-h2">Submit Your Film</h2>
         <div className="filmfest-body">
           <p>
             Interested in submitting a film to the festival? Check out our
