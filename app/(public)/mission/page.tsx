@@ -7,7 +7,7 @@ export default function MissionPage() {
     <main className="bg-white pb-12">
       {/* TITLE BLOCK */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-2 sm:pt-2 pb-2">
-        <h1 className="mx-[15vw] font-bold uppercase leading-tight text-[#00aaff] text-3xl sm:text-4xl md:text-5xl">
+        <h1 className="mx-[15vw] font-rowdies font-light uppercase leading-tight text-[#00aaff] text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
           <span className="block">San Diego</span>
           <span className="block">Independent Film</span>
           <span className="block text-black">Fest Mission</span>
@@ -30,7 +30,7 @@ export default function MissionPage() {
 
       {/* ABOUT THE FESTIVAL */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-4 sm:pt-10 pb-4">
-        <h2 className="font-bold text-center text-2xl sm:text-2xl md:text-4xl uppercase text-black mb-3">
+        <h2 className="font-rowdies font-light text-center text-2xl sm:text-2xl md:text-4xl uppercase text-black mb-3">
           About the Festival
         </h2>
         <div className="space-y-2 text-sm sm:text-base leading-tight">
@@ -84,10 +84,10 @@ export default function MissionPage() {
 
       {/* MEMBERSHIP / CINEMA SOCIETY */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-8 pb-4">
-        <h2 className="mx-6 font-bold uppercase leading-tight text-[#00aaff] text-4xl sm:text-4xl md:text-5xl mb-3">
+        <h2 className="mx-6 font-rowdies font-light uppercase leading-tight text-[#00aaff] text-4xl sm:text-4xl md:text-5xl mb-3">
           San Diego Independent Film Fest <span className="text-black">Membership</span>
         </h2>
-        <h3 className="mx-6 font-bold text-center text-2xl sm:text-2xl md:text-4xl uppercase text-black mb-3">
+        <h3 className="mx-6 font-rowdies font-light text-center text-2xl sm:text-2xl md:text-4xl uppercase text-black mb-3">
           Join the Cinema Society
         </h3>
         <div className="space-y-3 text-sm sm:text-base leading-tight">
@@ -136,10 +136,10 @@ export default function MissionPage() {
 
       {/* FESTIVAL NEWS / UPDATES */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-8 pb-4">
-        <h2 className="mx-6 font-bold uppercase leading-tight text-[#00aaff] text-4xl sm:text-4xl md:text-5xl mb-3">
+        <h2 className="mx-6 font-rowdies font-light uppercase leading-tight text-[#00aaff] text-4xl sm:text-4xl md:text-5xl mb-3">
           San Diego Independent Film Festival  <span className="text-black">News</span>
         </h2>
-        <h3 className="mx-6 font-bold text-center text-2xl sm:text-2xl md:text-4xl uppercase text-black mb-3">
+        <h3 className="mx-6 font-rowdies font-light text-center text-2xl sm:text-2xl md:text-4xl uppercase text-black mb-3">
           Festival Updates
         </h3>
         <div className="space-y-3 text-sm sm:text-base leading-tight">
@@ -200,10 +200,10 @@ export default function MissionPage() {
 
       {/* CINEMAS */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-8 pb-4">
-        <h2 className="mx-6 font-bold uppercase leading-tight text-[#00aaff] text-4xl sm:text-4xl md:text-5xl mb-3">
+        <h2 className="mx-6 font-rowdies font-light uppercase leading-tight text-[#00aaff] text-4xl sm:text-4xl md:text-5xl mb-3">
           San Diego Independent Film Fest <span className="text-black">Cinemas</span>
         </h2>
-        <h3 className="mx-6 font-bold text-center text-2xl sm:text-2xl md:text-4xl uppercase text-black mb-3">
+        <h3 className="mx-6 font-rowdies font-light text-center text-2xl sm:text-2xl md:text-4xl uppercase text-black mb-3">
           San Diego Cinemas
         </h3>
         <div className="space-y-3 text-sm sm:text-base leading-tight">
@@ -245,10 +245,10 @@ export default function MissionPage() {
 
       {/* SUBMISSIONS / FILMFREEWAY */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-8">
-        <h2 className="mx-6 font-bold uppercase leading-tight text-[#00aaff] text-4xl sm:text-4xl md:text-5xl mb-3">
+        <h2 className="mx-6 font-rowdies font-light uppercase leading-tight text-[#00aaff] text-4xl sm:text-4xl md:text-5xl mb-3">
           San Diego Independent Film Fest <span className="text-black">Submissions</span>
         </h2>
-        <h3 className="mx-6 font-bold text-center text-2xl sm:text-2xl md:text-4xl uppercase text-black mb-3">
+        <h3 className="mx-6 font-rowdies font-light text-center text-2xl sm:text-2xl md:text-4xl uppercase text-black mb-3">
           Submit Your Project
         </h3>
         <div className="space-y-3 text-sm sm:text-base leading-tight mb-6">

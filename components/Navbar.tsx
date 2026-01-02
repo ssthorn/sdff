@@ -6,12 +6,21 @@ import { NAV_GROUPS } from "./navConfig";
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center gap-6 text-xs lg:text-sm font-rowdies text-black">
+    <nav className="flex items-center gap-6 text-sm lg:text-sm font-rowdies text-white">
       {NAV_GROUPS.map((group) => (
         <div key={group.key} className="relative group">
           <button
             type="button"
-            className="uppercase font-normal hover:underline"
+            className="
+              inline-flex items-center
+              uppercase font-light
+              px-3 py-2
+              leading-none
+              border border-transparent
+              group-hover:bg-white group-hover:text-black
+              group-hover:border-black/10 group-hover:shadow-lg
+              group-hover:border-b-0
+            "
           >
             {group.label}
           </button>
@@ -21,13 +30,16 @@ export default function Navbar() {
 
           <div
             className="
-              absolute right-0 top-full
-              min-w-[220px]
+              absolute left-0 top-full
+              mt-0
+              min-w-full
               bg-white text-black
-              border border-black/10 shadow-lg py-2
+              border border-black/10 shadow-lg
+              border-t-0
+              border-b-[#66cbff] border-b-[6px]
               opacity-0 scale-95 pointer-events-none
               group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
-              transition-all duration-150
+              origin-top-left
               z-30
             "
           >
@@ -38,7 +50,15 @@ export default function Navbar() {
                   href={item.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="block px-4 py-1.5 text-[11px] lg:text-xs font-light tracking-normal hover:bg-black/5"
+                  className="
+                    block
+                    px-3 py-1.5
+                    text-[11px] lg:text-xs
+                    font-light
+                    leading-tight
+                    whitespace-nowrap
+                    hover:bg-black/5
+                  "
                 >
                   {item.label}
                 </a>
@@ -46,7 +66,15 @@ export default function Navbar() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="block px-4 py-1.5 text-[11px] lg:text-xs font-light tracking-normal hover:bg-black/5"
+                  className="
+                    block
+                    px-3 py-1.5
+                    text-[11px] lg:text-xs
+                    font-light
+                    leading-tight
+                    whitespace-nowrap
+                    hover:bg-black/5
+                  "
                 >
                   {item.label}
                 </Link>

@@ -95,10 +95,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-4 py-8 sm:py-10">
           {/* Section header */}
           <div className="text-center mb-6 sm:mb-8">
-            <h2 className="font-rowdies font-bold uppercase text-[#00aaff] text-2xl sm:text-3xl">
+            <h2 className="font-rowdies font-light uppercase text-[#00aaff] text-5xl lg:text-5xl sm:text-4xl">
               Film &amp; Event Info
             </h2>
-            <div className="mt-2 h-0.5 w-16 bg-[#00aaff] mx-auto" />
+            <div className="mt-2 h-0.5 w-[40%] bg-[#00aaff] mx-auto" />
           </div>
 
           {/* Tile grid */}
@@ -118,7 +118,7 @@ export default function HomePage() {
                     sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 50vw"
                   />
                 </div>
-                <p className="mt-2.5 text-xs sm:text-sm md:text-base font-rowdies font-normal uppercase tracking-[0.12em] text-center">
+                <p className="mt-2.5 text-xs sm:text-sm md:text-base font-rowdies font-normal uppercase tracking-normal text-center">
                   {tile.title}
                 </p>
               </Link>
