@@ -1,0 +1,17 @@
+* [33m704dfa5[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m nav styling run
+[31m|[m * [33m5e5bc60[m[33m ([m[1;31morigin/main[m[33m)[m Merge pull request #1 from ssthorn/vercel/react-server-components-cve-vu-oymwd0
+[31m|[m[31m/[m[33m|[m 
+[31m|[m * [33mfb4b8fc[m Fix React Server Components CVE vulnerabilities
+[31m|[m[31m/[m  
+* [33m2525c05[m syntax fixes
+* [33mdcb5ad5[m pages blocked for content
+* [33mc0c958c[m many if not all pages blocked in for content
+* [33mc671720[m nav styling updates
+* [33m8f327cc[m half step nav for test
+* [33m0489dbc[m pages added
+* [33mb4971f5[m pages added, tourism atm
+* [33mf7b910e[m tiles start
+* [33mb20a808[m setup, home, header, nav, fonts
+* [33m7214baf[m initial styling, header, nav, home
+* [33mc72228b[m o
+* [33m34b00d6[m Initial commit from Create Next App

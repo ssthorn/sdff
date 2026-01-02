@@ -4,6 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+    --font-rowdies: var(--font-rowdies);
+  --font-racing: var(--font-racing-sans);
+  --font-istok: var(--font-istok);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -138,3 +142,215 @@ body {
     @apply bg-background text-foreground;
   }
 }
+@layer components {
+  .mission-page {
+    @apply bg-white pb-12;
+  }
+
+  .mission-title-section {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8 pb-4;
+  }
+
+  .mission-section {
+    @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .mission-section-tight-top {
+    @apply pt-4 sm:pt-10 pb-4;
+  }
+
+  .mission-section-default {
+    @apply pb-4;
+  }
+
+  /* Titles */
+  .mission-hero-title {
+    @apply mx-[15vw]
+      font-rowdies font-light uppercase
+      leading-[0.85]
+      text-[#00aaff]
+      text-3xl sm:text-4xl md:text-6xl lg:text-7xl
+      pb-3 sm:pb-4;
+  }
+
+  .mission-hero-title--sub {
+    @apply mx-[15vw]
+      font-rowdies font-light uppercase
+      leading-[0.85]
+      text-[#00aaff]
+      text-3xl sm:text-4xl md:text-6xl lg:text-7xl
+      pb-3 sm:pb-4;
+  }
+
+  .mission-hero-accent {
+    @apply text-black;
+  }
+
+  /* Section headings */
+  .mission-h2 {
+    @apply font-rowdies font-light text-center uppercase text-black
+      text-2xl md:text-4xl mb-6;
+  }
+
+  .mission-h2--inset {
+    @apply mx-6;
+  }
+
+  /* Body */
+  .mission-body {
+    @apply space-y-3 text-sm sm:text-base leading-tight;
+  }
+
+  /* Links */
+  .mission-link {
+    @apply text-[#00aaff] hover:underline;
+  }
+
+  /* Images */
+  .mission-image-section {
+    @apply w-full;
+  }
+
+  .mission-image-frame {
+    @apply relative w-full max-w-5xl mx-auto;
+  }
+
+  .mission-image-aspect {
+    @apply relative w-full aspect-video;
+  }
+
+  .mission-image {
+    @apply object-cover;
+  }
+
+  .mission-center {
+    @apply flex justify-center;
+  }
+  /* Wider content sections (FilmFest uses max-w-5xl) */
+  .mission-section-wide {
+    @apply mx-auto max-w-5xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* FilmFest headings (reusable elsewhere too) */
+  .mission-h2-left {
+    @apply font-rowdies font-light uppercase text-black
+      text-xl sm:text-2xl md:text-[1.6rem]
+      mb-2;
+  }
+
+  .mission-h2-left--blue {
+    @apply text-[#00aaff];
+  }
+
+  .mission-h3-left {
+    @apply font-rowdies font-light uppercase text-black
+      text-sm sm:text-base
+      mb-3;
+  }
+
+  /* “stacked paragraphs” sections on FilmFest */
+  .mission-body-relaxed {
+    @apply text-sm sm:text-base leading-relaxed;
+  }
+
+  /* Consistent top spacing between content blocks inside a section */
+  .mission-block {
+    @apply mt-8;
+  }
+  .mission-block-tight {
+    @apply mt-3;
+  }
+  /* -------------------------
+     Centered “poster” variants
+     ------------------------- */
+
+  /* Centered hero title (FilmFest style) */
+  .mission-hero-title--center {
+    @apply mx-auto text-center;
+  }
+
+  /* Tighter stacked hero title (FilmFest needs slightly tighter) */
+  .mission-hero-title--tight {
+    @apply leading-[0.82];
+  }
+
+  /* Centered content sections (narrower + centered copy) */
+  .mission-section-center {
+    @apply mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center;
+  }
+
+  .mission-body-center {
+    @apply space-y-3 text-[12px] sm:text-sm md:text-sm leading-relaxed;
+  }
+
+  .mission-h2-center {
+    @apply font-rowdies font-normal uppercase text-black
+      text-lg sm:text-xl md:text-2xl
+      mb-2 text-center;
+  }
+
+  /* Block spacing between content groups inside a section */
+  .mission-block {
+    @apply mt-8;
+  }
+
+  .mission-block-tight {
+    @apply mt-4;
+  }
+
+  /* Links: FilmFest shows them as blue + underlined by default */
+  .mission-link-underline {
+    @apply text-[#00aaff] underline underline-offset-2;
+  }
+
+  /* Images: FilmFest images feel slightly more “framed” */
+  .mission-image-frame--framed {
+    @apply px-4 sm:px-0;
+  }
+  /* FilmFest: centered, narrow content column */
+  .filmfest-section {
+    @apply mx-auto max-w-xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* FilmFest: centered headline (FESTIVAL NEWS etc) */
+  .filmfest-h2 {
+    @apply text-center uppercase text-black
+      font-bold
+      tracking-wide
+      text-base sm:text-lg md:text-xl
+      mb-2;
+  }
+
+  /* FilmFest: centered subhead (SAN DIEGO FILM SOCIETY / SUBMIT YOUR FILM) */
+  .filmfest-h3 {
+    @apply text-center uppercase text-black
+      font-bold
+      tracking-wide
+      text-xs sm:text-sm md:text-base
+      mb-3;
+  }
+
+  /* FilmFest: body copy centered and compact */
+  .filmfest-body {
+    @apply text-center
+      text-[11px] sm:text-xs md:text-sm
+      leading-snug;
+  }
+
+  /* Consistent paragraph spacing inside centered blocks */
+  .filmfest-p {
+    @apply mt-3;
+  }
+
+  /* Big spacing between major content groups (News -> Tickets -> Programming) */
+  .filmfest-block {
+    @apply mt-8;
+  }
+
+  /* FilmFest links: blue + underlined by default */
+  .filmfest-link {
+    @apply text-[#00aaff] underline underline-offset-2;
+  }
+}
+
+
