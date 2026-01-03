@@ -3,6 +3,9 @@
 
 import Link from "next/link";
 import Navbar from "./Navbar";
+import FloatingMenuButton from "@/components/FloatingMenuButton";
+import { useEffect, useRef, useState } from "react";
+
 import { NAV_GROUPS, HOME_LINK, SUBMIT_CTA } from "./navConfig";
 import {
   Sheet,
@@ -17,8 +20,33 @@ const BLUE_MID = "#66ccff";
 const BLUE_DARK = "#00aaff";
 
 export default function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [showFloating, setShowFloating] = useState(false);
+  const headerRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (!headerRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowFloating(!entry.isIntersecting);
+      },
+      {
+        root: null,
+        threshold: 0,
+        rootMargin: "-20px",
+      }
+    );
+
+    observer.observe(headerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <header className="relative w-full font-rowdies border-b-4 border-black">
+    <header
+      ref={headerRef}
+      className="relative w-full font-rowdies border-b-4 border-black"
+    >
       {/* --- TOP STRIPE (DESKTOP NAV + MOBILE TRIGGER) --- */}
       <div
         style={{ backgroundColor: BLUE_LIGHT }}
@@ -36,12 +64,16 @@ export default function Header() {
 
           {/* Mobile menu trigger */}
           <div className="md:hidden flex items-center">
-            <Sheet>
-              <SheetTrigger
-                aria-label="Open navigation menu"
-                className="inline-flex items-center justify-center p-2 text-2xl font-bold leading-none"
-              >
-                ☰
+            <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
+              <SheetTrigger asChild>
+                <button
+                  type="button"
+                  aria-label="Open navigation menu"
+                  onClick={() => setMobileOpen(true)}
+                  className="inline-flex items-center justify-center p-2 text-2xl font-bold leading-none"
+                >
+                  ☰
+                </button>
               </SheetTrigger>
 
               {/* FULL-SCREEN MOBILE MENU */}
@@ -99,7 +131,6 @@ export default function Header() {
 
                 {/* NAV LIST */}
                 <nav className="flex-1 overflow-y-auto text-black">
-                  {/* Main groups */}
                   <div className="divide-y divide-black">
                     {NAV_GROUPS.map((group) => (
                       <details key={group.key} className="group">
@@ -213,6 +244,12 @@ export default function Header() {
           </span>
         </div>
       </div>
+
+      <FloatingMenuButton
+        open={mobileOpen}
+        visible={showFloating}
+        onToggle={() => setMobileOpen((v) => !v)}
+      />
     </header>
   );
 }
