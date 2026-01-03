@@ -32,7 +32,7 @@ export default function FilmFestPage() {
       {/* FESTIVAL NEWS / TICKETS / PROGRAMMING */}
       <section className="filmfest-section pt-8 sm:pt-10 pb-6">
         <h2 className="filmfest-h2">Festival News</h2>
-        <div className="filmfest-body">
+        <div className="mission-body">
           <p>
             The San Diego Independent Film Festival returns to the most beautiful
             city in the world once again this fall.
@@ -59,7 +59,7 @@ export default function FilmFestPage() {
         </div>
 
         <h2 className="filmfest-h2 filmfest-block">Tickets &amp; Passes</h2>
-        <div className="filmfest-body">
+        <div className="mission-body">
           <p>
             Tickets &amp; Passes to the San Diego Independent Film Festival are
             released two weeks prior to Opening Day.
@@ -74,7 +74,7 @@ export default function FilmFestPage() {
         </div>
 
         <h2 className="filmfest-h2 filmfest-block">Programming</h2>
-        <div className="filmfest-body">
+        <div className="mission-body">
           <p>
             The San Diego Independent Film Festival unveils its annual programming
             slate each fall, showcasing the most innovative and independent
@@ -118,7 +118,7 @@ export default function FilmFestPage() {
 
       <section className="filmfest-section pb-6">
         <h2 className="filmfest-h2">San Diego Film Society</h2>
-        <div className="filmfest-body">
+        <div className="mission-body">
           <p>
             The San Diego Independent Film Society currently hosts several
             quarterly screening events in addition to co-sponsoring our San Diego
@@ -176,7 +176,7 @@ export default function FilmFestPage() {
 
       <section className="filmfest-section pb-8">
         <h2 className="filmfest-h2">Submit Your Film</h2>
-        <div className="filmfest-body">
+        <div className="mission-body">
           <p>
             Interested in submitting a film to the festival? Check out our
             extensive Festival Submission F.A.Q.{" "}
@@ -200,7 +200,7 @@ export default function FilmFestPage() {
         </div>
 
         <h2 className="filmfest-h2 filmfest-block">Screenplay Submissions</h2>
-        <div className="filmfest-body">
+        <div className="mission-body">
           <p>
             Interested in submitting your screenplay in our annual Screenplay
             Contest? Our annual competition features a $2,000.00 cash prize to the
@@ -231,7 +231,7 @@ export default function FilmFestPage() {
               alt="FilmFreeway submit button"
               width={260}
               height={80}
-              className="h-auto w-[180px] sm:w-[220px] md:w-[260px]"
+              className="film-freeway-logo"
             />
           </a>
         </div>

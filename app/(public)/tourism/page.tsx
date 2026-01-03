@@ -717,7 +717,7 @@ function scrollToSection(id: NeighborhoodId) {
 function TourismCard({ place }: { place: TourismPlace }) {
   const cardInner = (
     <>
-      <div className="relative w-full h-64 sm:h-72 overflow-hidden rounded-t-[18px]">
+      <div className="relative w-full h-64 sm:h-72 overflow-hidden rounded-t-md">
         <Image
           src={place.imageSrc}
           alt={place.imageAlt}
@@ -726,17 +726,17 @@ function TourismCard({ place }: { place: TourismPlace }) {
         />
       </div>
       <div className="px-5 pb-5 pt-4 text-center">
-        <h3 className="font-rowdies text-[1.1rem] uppercase tracking-wide mb-2">
+        <h3 className="tourism-place-title">
           {place.title}
         </h3>
-        <p className="text-[0.85rem] leading-snug mb-3">{place.description}</p>
+        <p className="tourism-place-description">{place.description}</p>
         {place.url && (
-          <p className="text-[0.8rem] text-[#0077cc] underline wrap-break-word mb-1">
+          <p className="tourism-place-url">
             {place.url.replace(/^https?:\/\//, "")}
           </p>
         )}
         {place.address && (
-          <p className="text-[0.8rem] leading-tight text-gray-700">
+          <p className="tourism-place-address">
             {place.address}
           </p>
         )}
@@ -745,7 +745,7 @@ function TourismCard({ place }: { place: TourismPlace }) {
   );
 
   return (
-    <article className="bg-white rounded-[20px] shadow-[0_4px_10px_rgba(0,0,0,0.18)] overflow-hidden border border-black/8">
+    <article className="bg-white rounded-md shadow-[0_4px_10px_rgba(0,0,0,0.18)] overflow-hidden border border-black/8">
       {place.url ? (
         <Link href={place.url} target="_blank" rel="noreferrer">
           {cardInner}
@@ -771,36 +771,42 @@ export default function TourismPage() {
   }
 
   return (
-    <main className="bg-[#f5f5f5] pb-16">
+    <main className="bg-white pb-16">
       {/* page anchor for "top" */}
       <div id="top" />
 
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6">
-        {/* PAGE TITLE */}
-        <h1 className="font-rowdies text-center text-[2.2rem] sm:text-[2.7rem] md:text-[3rem] tracking-[0.18em] text-[#00aaff] uppercase mb-4">
-          SAN DIEGO TOURISM
-        </h1>
+     {/* TITLE */}
+<section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-2">
+  <h1 className="tourism-page-title">SAN DIEGO TOURISM</h1>
+</section>
 
-        {/* SEARCH BY NEIGHBORHOOD BAR */}
-        <div className="flex justify-center mb-10">
-          <button
-            type="button"
-            onClick={() => setOpen((v) => !v)}
-            className="w-full max-w-xs sm:max-w-sm bg-white border border-black shadow-sm py-3 px-4 flex items-center justify-between text-[0.9rem] font-bold tracking-wide uppercase"
-          >
-            <span className="text-[#0077cc]">Search By Neighborhood</span>
-            <span className="text-xl leading-none">
-              {open ? "✕" : "▾"}
-            </span>
-          </button>
-        </div>
+{/* STICKY NEIGHBORHOOD CONTROL */}
+<div className="sticky top-4 sm:top-6 md:top-8 z-30  ">
+
+  <div className=" ">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 ">
+      <div className="flex justify-center ">
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          className=" bg-white/80 backdrop-blur mb-4 border-b-2 border-[#06a9ff] w-full max-w-xs sm:max-w-sm  py-3 px-4 flex items-center justify-center text-base"
+        >
+          <span className="text-[#0077cc] hover:italic ">Search By Neighborhood</span>
+          <span className="text-xl leading-none">{open ? "✕" : null}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
         {/* DROPDOWN PANEL */}
         {open && (
-          <div className="fixed inset-0 z-40 flex items-start justify-center pt-28 sm:pt-32 bg-black/30">
+          <div className="fixed inset-0 z-40 flex items-start justify-center pt-10 sm:pt-10 bg-black/30">
             <div className="w-full max-w-xs sm:max-w-sm bg-white border border-black shadow-xl">
-              <div className="flex items-center justify-between px-4 py-3 border-b border-black/15">
-                <span className="font-bold text-[0.9rem] tracking-wide text-[#0077cc] uppercase">
+              <div className="flex items-center justify-between  px-4 py-3 border-b border-black/15">
+                <span className=" text-base tracking-wide text-[#0077cc] ">
                   Search By Neighborhood
                 </span>
                 <button
@@ -811,7 +817,7 @@ export default function TourismPage() {
                   ✕
                 </button>
               </div>
-              <ul className="max-h-[70vh] overflow-y-auto">
+              <ul className="max-h-[70vh] overflow-y-auto border-b-40 border-b-[#66cbff]">
                 {NEIGHBORHOOD_FILTERS.map((item, idx) => (
                   <li key={item.id}>
                     <button
@@ -822,8 +828,7 @@ export default function TourismPage() {
                       }}
                       className={clsx(
                         "w-full text-left px-5 py-3 border-t border-black/15 text-[0.95rem] font-bold uppercase",
-                        idx === NEIGHBORHOOD_FILTERS.length - 1 &&
-                          "bg-[#66ccff]"
+                        
                       )}
                     >
                       {item.label}
@@ -834,7 +839,6 @@ export default function TourismPage() {
             </div>
           </div>
         )}
-      </section>
 
       {/* SECTIONS WITH CARDS */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -842,7 +846,7 @@ export default function TourismPage() {
           <div key={section.id} id={section.id} className="scroll-mt-32">
             {/* hide heading for top group (already have big title) */}
             {section.id !== "top" && (
-              <h2 className="font-rowdies text-center text-[1.7rem] sm:text-[2rem] tracking-[0.16em] text-[#00aaff] uppercase mb-6">
+              <h2 className="tourism-section-title">
                 {section.label}
               </h2>
             )}

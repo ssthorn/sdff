@@ -111,7 +111,7 @@ function RestaurantCard({ r }: { r: Restaurant }) {
     >
       {/* Desktop layout: image left + text right */}
       <div className="grid grid-cols-1 sm:grid-cols-[220px_1fr]">
-        <div className="relative aspect-[4/3] w-full sm:aspect-auto sm:h-full sm:min-h-[170px]">
+        <div className="relative aspect-4/3 w-full sm:aspect-auto sm:h-full sm:min-h-[170px]">
           <Image
             src={r.imageSrc}
             alt={r.name}
@@ -123,28 +123,28 @@ function RestaurantCard({ r }: { r: Restaurant }) {
         </div>
 
         <div className="relative p-4 sm:p-4">
-          <h3 className="font-rowdies text-[18px] leading-tight text-black">
+          <h3 className="font-rowdies font-light text-[18px] leading-tight text-black">
             {r.name}
           </h3>
 
-          <div className="mt-1 font-istok text-[12px] leading-snug text-black/90">
+          <div className=" font-istok text-[12px] leading-snug text-black/90">
             {r.addressLines.map((line, idx) => (
               <div key={idx}>{line}</div>
             ))}
           </div>
 
-          <div className="mt-2">
+          <div className="">
             <a
               href={r.websiteUrl}
               target="_blank"
               rel="noreferrer"
-              className="font-istok text-[12px] text-[#0F84B5] underline underline-offset-4 hover:text-black"
+              className="font-istok text-[12px] text-[#0F84B5] underline"
             >
               {r.websiteLabel}
             </a>
           </div>
 
-          <p className="mt-2 font-istok text-[12px] leading-tight text-black/85">
+          <p className="font-istok text-[12px] leading-tight text-black/85">
             {r.description}
           </p>
 
@@ -163,8 +163,7 @@ export default function RestaurantsPage() {
     <main className="bg-white text-black">
       <div className="mx-auto w-full max-w-6xl px-4 pb-14 pt-10 sm:px-6">
         <header className="text-center">
-          <h1 className="font-rowdies text-[44px] tracking-wide text-[#17A7E0] sm:text-[60px]">
-            RESTAURANTS
+<h1 className="text-center font-rowdies text-[38px] font-light uppercase tracking-wide text-[#00AEEF] sm:text-[52px]">            RESTAURANTS
           </h1>
         </header>
 

@@ -12,8 +12,8 @@ type HotelItem = {
   addressLines: string[];
   description: string;
   imageSrc: string;
-  // Optional: if you have a logo image rather than a photo
   imageContain?: boolean;
+  forceContain?: boolean; // NEW: for wide "flag" logos that must never crop
 };
 
 const HOTELS: HotelItem[] = [
@@ -28,11 +28,11 @@ const HOTELS: HotelItem[] = [
   },
   {
     area: "Gaslamp District",
-    name: "Baymont By Wyndham San Diego Downtown",
+    name: "Baymont By Wyndham",
     url: "https://www.wyndhamhotels.com/baymont",
     addressLines: ["719 Ash St,", "San Diego, CA 92101"],
     description:
-      "Our most budget-friendly hotel recommendation, the Baymont by Wyndham San Diego is conveniently located on the edge of the Gaslamp District and next to entrances for both I-5 and Route 163. This downtown hotel provides easy access to Balboa Park and its many attractions — like the Zoo and the San Diego Independent Film Festival.",
+      "Our most budget-friendly recommendation, Baymont by Wyndham San Diego sits at the edge of the Gaslamp District near I-5 and Route 163, offering easy access to Balboa Park, the Zoo, and the San Diego Independent Film Festival.",
     imageSrc: "/hotel/2.) Baymont By Wyndham_NEW.png",
   },
   {
@@ -62,6 +62,7 @@ const HOTELS: HotelItem[] = [
     description:
       "The largest hotel in southern California with its distinctive two towers, this waterfront resort offers stunning Marina views, convenient to the convention center, Seaport Village and downtown.",
     imageSrc: "/hotel/5.) ManchesterGrandHyatt.png",
+    forceContain: true, // NEW: ensures full logo always visible
   },
   {
     area: "Gaslamp District",
@@ -93,79 +94,84 @@ const HOTELS: HotelItem[] = [
   },
 ];
 
-function HotelCard({ item, flip }: { item: HotelItem; flip?: boolean }) {
+function hostOnly(url: string) {
+  return url.replace(/^https?:\/\//, "").replace(/\/$/, "");
+}
+
+function HotelCard({ item }: { item: HotelItem }) {
+  const displayUrl = hostOnly(item.url);
+
   return (
-    <article
-      className={[
-        "rounded-[14px] border border-black/20 bg-white shadow-[0_10px_28px_rgba(0,0,0,0.12)]",
-        "overflow-hidden",
-      ].join(" ")}
-    >
-      <div
-        className={[
-          "flex flex-col md:min-h-[168px] md:flex-row",
-          flip ? "md:flex-row-reverse" : "",
-        ].join(" ")}
-      >
-        <div className="relative h-[170px] w-full md:h-auto md:w-[46%]">
-          <Image
-            src={item.imageSrc}
-            alt={item.name}
-            fill
-            className={[
-              item.imageContain ? "object-contain bg-white p-6" : "object-cover",
-            ].join(" ")}
-            sizes="(max-width: 768px) 100vw, 420px"
-          />
-        </div>
+    <div className="w-full">
+      {/* Area label outside card */}
+      <div className="mb-1 pl-1 text-[12px] text-black/80">
+        {item.area}
+      </div>
 
-        <div className="w-full p-4 md:w-[54%] md:p-5">
-          {/* Area label (small, left, like screenshot) */}
-          <p className="text-[12px] font-bold text-black/70">{item.area}</p>
-
-          {/* Name */}
-          <h2 className="mt-1 font-rowdies text-[16px] font-extrabold text-black sm:text-[17px]">
-            {item.name}
-          </h2>
-
-          {/* URL (tiny blue) */}
-          <a
-            href={item.url}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-1 block text-[11px] text-[#1212ee] underline"
-          >
-            {item.url.replace("https://", "").replace("http://", "")}
-          </a>
-
-          {/* Address */}
-          <div className="mt-2 text-[12px] leading-tight text-black">
-            {item.addressLines.map((line) => (
-              <div key={line}>{line}</div>
-            ))}
+      <article className="rounded-[12px] border border-black/30 bg-white shadow-[0_4px_10px_rgba(0,0,0,0.08)] overflow-hidden">
+        {/* Mobile: vertical. Desktop: horizontal */}
+        <div className="flex w-full flex-col md:flex-row">
+          {/* Image: full width on mobile, half width on desktop, always square */}
+          <div className="relative w-full md:w-1/2 aspect-square border-b md:border-b-0 md:border-r border-black/25">
+            <Image
+              src={item.imageSrc}
+              alt={item.name}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className={
+                item.forceContain
+                  ? "object-contain p-6 bg-white"
+                  : item.imageContain
+                    ? "object-contain p-4"
+                    : "object-cover"
+              }
+              style={{ objectPosition: "center" }}
+            />
           </div>
 
-          {/* Description */}
-          <p className="mt-3 text-[12px] leading-[1.35] text-black">
-            {item.description}
-          </p>
+          {/* Content: full width on mobile, half on desktop */}
+          <div className="flex w-full md:w-1/2 flex-col px-4 py-4">
+            <h2 className="font-rowdies text-[18px] md:text-xl font-light leading-[1.05] tracking-tight text-black">
+              {item.name}
+            </h2>
+
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-1 block text-[12px] md:text-xs leading-tight tracking-tight text-[#00aaff] underline break-all"
+            >
+              {displayUrl}
+            </a>
+
+            <div className="mt-2 text-[12px] md:text-xs leading-tight tracking-tight text-black">
+              {item.addressLines.map((line) => (
+                <div key={line}>{line}</div>
+              ))}
+            </div>
+
+            <p className="mt-2 text-[13px] md:text-sm leading-[1.28] md:leading-[1.22] tracking-tight text-black">
+              {item.description}
+            </p>
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </div>
   );
 }
+
 
 export default function HotelPage() {
   return (
     <main className="bg-white">
       <div className="mx-auto w-full max-w-[1120px] px-4 pb-16 pt-10 sm:px-6">
-        <h1 className="text-center font-rowdies text-[38px] font-extrabold uppercase tracking-wide text-[#00AEEF] sm:text-[52px]">
+        <h1 className="text-center font-rowdies text-[38px] font-light uppercase tracking-wide text-[#00AEEF] sm:text-[52px]">
           Hotels
         </h1>
 
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7">
-          {HOTELS.map((item, idx) => (
-            <HotelCard key={item.name} item={item} flip={idx % 2 === 1} />
+          {HOTELS.map((item) => (
+            <HotelCard key={item.name} item={item} />
           ))}
         </div>
       </div>

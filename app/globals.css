@@ -148,11 +148,11 @@ body {
   }
 
   .mission-title-section {
-    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8 pb-4;
+    @apply mx-auto max-w-7xl  lg:px-8 pt-8 pb-4;
   }
 
   .mission-section {
-    @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto max-w-4xl px-4 sm:px-6 md:px-10 lg:px-8;
   }
 
   .mission-section-tight-top {
@@ -165,12 +165,11 @@ body {
 
   /* Titles */
   .mission-hero-title {
-    @apply mx-[15vw]
+    @apply mx-[10vw]
       font-rowdies font-light uppercase
       leading-[0.85]
       text-[#00aaff]
-      text-3xl sm:text-4xl md:text-6xl lg:text-7xl
-      pb-3 sm:pb-4;
+      text-4xl sm:text-6xl md:text-6xl lg:text-7xl;
   }
 
   .mission-hero-title--sub {
@@ -199,7 +198,7 @@ body {
 
   /* Body */
   .mission-body {
-    @apply space-y-3 text-sm sm:text-base leading-tight;
+    @apply space-y-3 text-base sm:text-base md:text-2xl leading-tight;
   }
 
   /* Links */
@@ -213,7 +212,7 @@ body {
   }
 
   .mission-image-frame {
-    @apply relative w-full max-w-5xl mx-auto;
+    @apply relative w-full max-w-5xl mx-auto px-1;
   }
 
   .mission-image-aspect {
@@ -332,8 +331,7 @@ body {
   /* FilmFest: body copy centered and compact */
   .filmfest-body {
     @apply text-center
-      text-[11px] sm:text-xs md:text-sm
-      leading-snug;
+      text-base sm:text-base md:text-2xl leading-tight;
   }
 
   /* Consistent paragraph spacing inside centered blocks */
@@ -349,6 +347,27 @@ body {
   /* FilmFest links: blue + underlined by default */
   .filmfest-link {
     @apply text-[#00aaff] underline underline-offset-2;
+  }
+  .film-freeway-logo {
+    @apply h-auto w-[260px] sm:w-[260px] md:w-[500px];
+  }
+  .tourism-page-title {
+    @apply font-rowdies font-light text-center text-[2.2rem] sm:text-[2.7rem] md:text-[3rem] text-[#00aaff] uppercase mb-4;
+  }
+  .tourism-section-title {
+    @apply font-rowdies font-light text-center text-[1.7rem] sm:text-[2rem] text-[#00aaff] uppercase mb-6;
+  }
+  .tourism-place-title {
+    @apply font-rowdies font-light text-4xl md:text-xl mb-2;
+  }
+  .tourism-place-description {
+    @apply text-lg md:text-base leading-snug mb-3;
+  }
+  .tourism-place-url {
+    @apply text-sm text-[#0077cc] hover:underline wrap-break-word mb-1;
+  }
+  .tourism-place-address {
+    @apply border-black/30 border-t-2 pt-4 mt-4;
   }
 }
 

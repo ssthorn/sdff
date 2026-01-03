@@ -124,7 +124,7 @@ function TravelCard({ item }: { item: TravelItem }) {
             relative
             h-[72px] w-[92px]
             sm:h-[86px] sm:w-[120px]
-            flex-shrink-0
+            shrink-0
           "
         >
           <Image
@@ -139,7 +139,7 @@ function TravelCard({ item }: { item: TravelItem }) {
 
         {/* Text block (right) */}
         <div className="min-w-0">
-          <div className="text-[16px] sm:text-[20px] font-extrabold leading-tight text-black">
+          <div className="font-rowdies font-light text-[16px] sm:text-[20px] leading-tight text-black">
             {item.title}
           </div>
 
@@ -173,7 +173,7 @@ export default function TravelPage() {
         {/* Page title */}
         <h1
           className="
-            text-center font-extrabold tracking-wide
+            text-center font-rowdies font-light tracking-wide
             text-[34px] sm:text-[56px]
             mb-10 sm:mb-14
           "
@@ -186,7 +186,7 @@ export default function TravelPage() {
         <div className="space-y-10 sm:space-y-14">
           {SECTIONS.map((section) => (
             <section key={section.heading}>
-              <h2 className="text-[18px] sm:text-[22px] font-extrabold text-black tracking-wide mb-4 sm:mb-6">
+              <h2 className="text-[18px] sm:text-[22px] font-rowdies font-light text-black tracking-wide mb-4 sm:mb-6">
                 {section.heading}
               </h2>
 

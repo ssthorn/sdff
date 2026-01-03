@@ -64,7 +64,7 @@ export default function HeroSlideshow() {
   };
 
   return (
-    <section className="relative w-full border-b border-black/10">
+    <section className="relative w-full w-border-b border-black/10">
       <div className="relative w-full aspect-video max-h-[640px] overflow-hidden">
         {SLIDES.map((slide, i) => (
           <div

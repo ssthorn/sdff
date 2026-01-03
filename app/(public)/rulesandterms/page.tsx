@@ -10,8 +10,7 @@ export default function RulesAndTermsPage() {
       <section className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8 pt-10 sm:pt-12 pb-16">
         {/* Page title */}
         <div className="text-center">
-          <h1 className="font-arial uppercase font-bold text-[#03ABFE] text-[22px] sm:text-3xl tracking-[0.06em]">
-            Rules &amp; Terms
+<h1 className="text-center font-rowdies text-[38px] font-light uppercase tracking-wide text-[#00AEEF] sm:text-[52px]">            Rules &amp; Terms
           </h1>
         </div>
 

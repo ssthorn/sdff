@@ -14,9 +14,9 @@ function PlusIcon({ open }: { open: boolean }) {
   // matches the simple + / - vibe from the mock
   return (
     <span className="relative inline-block h-4 w-4">
-      <span className="absolute left-0 top-1/2 h-[2px] w-4 -translate-y-1/2 bg-white" />
+      <span className="absolute left-0 top-1/2 h-0.5 w-4 -translate-y-1/2 bg-white" />
       {!open && (
-        <span className="absolute left-1/2 top-0 h-4 w-[2px] -translate-x-1/2 bg-white" />
+        <span className="absolute left-1/2 top-0 h-4 w-0.5 -translate-x-1/2 bg-white" />
       )}
     </span>
   );
@@ -35,7 +35,7 @@ function BlueFaq({
 
   return (
     <section className="mx-auto max-w-3xl px-4 sm:px-6">
-      <h2 className="text-center font-rowdies font-bold uppercase text-black text-lg sm:text-xl tracking-wide">
+      <h2 className="text-center font-rowdies font-light uppercase text-2xl">
         {title}
       </h2>
 
@@ -49,7 +49,7 @@ function BlueFaq({
                 onClick={() => setOpenIndex(open ? null : idx)}
                 className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left"
               >
-                <span className="text-white font-rowdies font-bold uppercase tracking-wide text-xs sm:text-sm">
+                <span className="text-white text-center font-rowdies font-light uppercase text-xl">
                   {it.q}
                 </span>
                 <PlusIcon open={open} />
@@ -77,10 +77,10 @@ function InfoBox({
 }) {
   return (
     <div className="rounded-2xl border border-black/20 bg-white px-6 py-5 shadow-[0_8px_18px_rgba(0,0,0,0.12)]">
-      <h3 className="text-center font-rowdies font-bold uppercase text-black text-sm sm:text-base tracking-wide">
+      <h3 className="text-center font-rowdies font-light uppercase text-2xl">
         {title}
       </h3>
-      <div className="mt-3 text-center text-[12px] sm:text-[13px] leading-relaxed text-black/90">
+      <div className="mt-3 text-center text-lg">
         {children}
       </div>
     </div>
@@ -179,13 +179,12 @@ export default function ScreenplayPage() {
     <main className="bg-white">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-10 pb-14">
         {/* Title */}
-        <h1 className="text-center font-rowdies font-bold uppercase text-[#00aaff] text-2xl sm:text-3xl tracking-wide">
-          Screenplay Contest
+<h1 className="text-center font-rowdies text-[38px] font-light uppercase tracking-wide text-[#00AEEF] sm:text-[52px]">          Screenplay Contest
         </h1>
 
         {/* Top "Carousel" image */}
         <div className="mt-4 mx-auto max-w-3xl">
-          <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-[0_10px_22px_rgba(0,0,0,0.18)]">
+          <div className="relative w-full aspect-video overflow-hidden shadow-[0_10px_22px_rgba(0,0,0,0.18)]">
             <Image
               src="/screenplay/1.) Carousel.JPG"
               alt="Screenplay contest carousel"
@@ -199,13 +198,14 @@ export default function ScreenplayPage() {
 
         {/* How to enter */}
         <section className="mt-7 text-center">
-          <h2 className="font-rowdies font-bold uppercase text-black text-lg sm:text-xl tracking-wide">
+          <h2 className="font-rowdies font-light uppercase text-4xl">
             How To Enter Your Screenplay
           </h2>
 
-          <p className="mt-2 mx-auto max-w-2xl text-[12px] sm:text-[13px] leading-relaxed text-black/80">
+          <p className="mt-4 mx-auto max-w-2xl text-lg">
             See our contest submission platform (FilmFreeway) for current
             Screenplay Submission Categories, Fees, and Deadlines.
+            <br />
             <br />
             Submissions available through FilmFreeway.
           </p>
@@ -280,7 +280,7 @@ export default function ScreenplayPage() {
 
         {/* Notebook image */}
         <div className="mt-10 mx-auto max-w-3xl">
-          <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-[0_10px_22px_rgba(0,0,0,0.18)]">
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-[0_10px_22px_rgba(0,0,0,0.18)]">
             <Image
               src="/screenplay/3.) SP_notebook.jpg"
               alt="Notebook"
@@ -293,23 +293,23 @@ export default function ScreenplayPage() {
 
         {/* Award categories */}
         <section className="mt-10 text-center px-4">
-          <h2 className="font-rowdies font-bold uppercase text-black text-lg sm:text-xl tracking-wide">
+          <h2 className="font-rowdies font-light uppercase text-black text-4xl">
             Screenplay
             <br className="sm:hidden" /> Award Categories
           </h2>
 
-          <div className="mt-4 text-[12px] sm:text-[13px] leading-relaxed text-black">
+          <div className="mt-4 text-2xl">
             <div className="font-semibold">Best Screenplay</div>
-            <div className="text-black/70">1st Place Grand Prize Winner</div>
+            <div className="text-black/70 italic text-base">1st Place Grand Prize Winner</div>
 
-            <div className="mt-3">Best Screenplay</div>
-            <div className="text-black/70">- 1st Runner Up -</div>
+            <div className="mt-4">Best Screenplay</div>
+            <div className="text-black/70 italic text-base">- 1st Runner Up -</div>
 
-            <div className="mt-3">Best Screenplay</div>
-            <div className="text-black/70">- 2nd Runner Up -</div>
+            <div className="mt-4">Best Screenplay</div>
+            <div className="text-black/70 italic text-base">- 2nd Runner Up -</div>
 
-            <div className="mt-3">Best Teleplay</div>
-            <div className="mt-1">Best Short Teleplay</div>
+            <div className="mt-4">Best Teleplay</div>
+            <div className="mt-4">Best Short Teleplay</div>
           </div>
         </section>
 
@@ -320,7 +320,7 @@ export default function ScreenplayPage() {
 
         {/* VW Bus image */}
         <div className="mt-10 mx-auto max-w-3xl">
-          <div className="relative w-full aspect-[21/9] rounded-2xl overflow-hidden shadow-[0_10px_22px_rgba(0,0,0,0.18)]">
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-[0_10px_22px_rgba(0,0,0,0.18)]">
             <Image
               src="/screenplay/4.) VlW BusNEWM.png"
               alt="VW Bus on the beach"

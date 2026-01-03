@@ -77,11 +77,11 @@ export default function Header() {
                     style={{ backgroundColor: BLUE_MID }}
                     className="w-full h-[42px] px-4 sm:px-6 lg:px-8 flex items-center"
                   >
-                    <div className="mx-auto w-full max-w-6xl">
+                    <Link href="/" className="mx-auto w-full max-w-6xl">
                       <span className="text-white text-[1.8rem] sm:text-[1.9rem] font-rowdies font-normal uppercase leading-[0.9]">
                         INDEPENDENT
                       </span>
-                    </div>
+                    </Link>
                   </div>
 
                   {/* Bottom stripe */}
@@ -195,11 +195,11 @@ export default function Header() {
         style={{ backgroundColor: BLUE_MID }}
         className="w-full h-[42px] px-4 sm:px-6 lg:px-8 flex items-center"
       >
-        <div className="mx-auto w-full max-w-6xl">
+        <Link href="/" className="mx-auto w-full max-w-6xl">
           <span className="text-white text-[2.3rem] sm:text-[2.7rem] md:text-[3.1rem] font-normal uppercase leading-[0.9]">
             INDEPENDENT
           </span>
-        </div>
+        </Link>
       </div>
 
       {/* --- BOTTOM STRIPE (DESKTOP VIEW) --- */}
