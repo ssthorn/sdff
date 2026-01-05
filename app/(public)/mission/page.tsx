@@ -32,7 +32,7 @@ export default function MissionPage() {
       {/* ABOUT THE FESTIVAL */}
       <section className="mission-section mission-section-tight-top">
         <h2 className="mission-h2">About the Festival</h2>
-        <div className="filmfest-body">
+        <div className="mission-body">
           <p>
             The San Diego Independent Film Festival was founded in 2016 out of a
             deeply held belief regarding cinema and its power to inspire,
@@ -93,7 +93,7 @@ export default function MissionPage() {
 
       <section className="mission-section mission-section-default">
         <h2 className="mission-h2 mission-h2--inset">Join the Cinema Society</h2>
-        <div className="filmfest-body">
+        <div className="mission-body">
           <p>
             We are grateful to be co-sponsored by the San Diego Independent Film
             Society.
@@ -150,7 +150,7 @@ export default function MissionPage() {
 
       <section className="mission-section mission-section-default">
         <h2 className="mission-h2 mission-h2--inset">Festival Updates</h2>
-        <div className="filmfest-body">
+        <div className="mission-body">
           <p>
             The San Diego Independent Film Festival is excited to once again be
             hosting our award ceremony and several premiere screening events in
@@ -219,7 +219,7 @@ export default function MissionPage() {
 
       <section className="mission-section mission-section-default">
         <h2 className="mission-h2 mission-h2--inset">San Diego Cinemas</h2>
-        <div className="filmfest-body">
+        <div className="mission-body">
           <p>San Diego offers an amazing array of cinemas.</p>
           <p>
             From multiplexes like the AMC theaters in Mission Valley and La
@@ -270,7 +270,7 @@ export default function MissionPage() {
       <section className="mission-section mission-section-default">
         <h2 className="mission-h2 mission-h2--inset">Submit Your Project</h2>
 
-        <div className="filmfest-body mb-6">
+        <div className="mission-body mb-6">
           <p>
             <strong>Film Submissions:</strong> If you are interested in
             submitting a film to the festival, make sure to check out our
