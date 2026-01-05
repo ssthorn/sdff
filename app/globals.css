@@ -148,7 +148,7 @@ body {
   }
 
   .mission-title-section {
-    @apply mx-auto max-w-7xl  lg:px-8 pt-8 pb-4;
+    @apply mx-auto flex justify-center max-w-7xl  lg:px-8 pt-8 pb-12;
   }
 
   .mission-section {
@@ -165,9 +165,9 @@ body {
 
   /* Titles */
   .mission-hero-title {
-    @apply mx-6
+    @apply mx-6 md:mx-[20vw]
       font-rowdies font-light uppercase
-      leading-9
+      leading-9 md:leading-13
       text-[#00aaff]
       text-4xl md:text-6xl;
   }

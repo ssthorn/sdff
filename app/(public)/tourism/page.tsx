@@ -789,7 +789,7 @@ export default function TourismPage() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className=" bg-white/80 backdrop-blur mb-4 border-b-2 border-[#06a9ff] w-full max-w-xs sm:max-w-sm  py-3 px-4 flex items-center justify-center text-base"
+          className=" bg-white/80 backdrop-blur-soft mb-4 border-b-2 border-[#06a9ff] w-full max-w-xs sm:max-w-sm  py-3 px-4 flex items-center justify-center text-base"
         >
           <span className="text-[#0077cc] hover:italic ">Search By Neighborhood</span>
           <span className="text-xl leading-none">{open ? "✕" : null}</span>

@@ -30,7 +30,7 @@ const COLUMN_2: FooterLink[] = [
 
 const COLUMN_3: FooterLink[] = [
   { label: "Membership", href: "/mission" },
-  { label: "Cinemas", href: "/cinema" },
+  { label: "Cinemas", href: "/cinemas" },
   { label: "Film Awards", href: "/awards" },
   { label: "Press & Industry", href: "/contact" },
 ];
@@ -110,7 +110,7 @@ export default function Footer() {
               alt="X"
               width={48}
               height={48}
-              className="w-10 h-10 sm:w-12 sm:h-12"
+              className="w-9.5 h-9.5"
             />
           </a>
 
