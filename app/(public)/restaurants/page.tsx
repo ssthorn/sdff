@@ -161,13 +161,13 @@ function RestaurantCard({ r }: { r: Restaurant }) {
 export default function RestaurantsPage() {
   return (
     <main className="bg-white text-black">
-      <div className="mx-auto w-full max-w-6xl px-4 pb-14 pt-10 sm:px-6">
+      <div className="mx-auto w-full max-w-6xl px-4 pb-14 pt-6 sm:px-6">
         <header className="text-center">
-<h1 className="text-center font-rowdies text-[38px] font-light uppercase tracking-wide text-[#00AEEF] sm:text-[52px]">            RESTAURANTS
+<h1 className="text-center font-rowdies text-4xl font-light uppercase tracking-tight text-[#00AEEF]">            RESTAURANTS
           </h1>
         </header>
 
-        <section className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <section className="mt-4 grid grid-cols-1 gap-6 lg:grid-cols-2">
           {RESTAURANTS.map((r) => (
             <RestaurantCard key={r.name} r={r} />
           ))}

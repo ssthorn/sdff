@@ -30,7 +30,7 @@ export default function FilmFestPage() {
       </section>
 
       {/* FESTIVAL NEWS / TICKETS / PROGRAMMING */}
-      <section className="filmfest-section pt-8 sm:pt-10 pb-6">
+      <section className="filmfest-section py-6">
         <h2 className="filmfest-h2">Festival News</h2>
         <div className="mission-body">
           <p>

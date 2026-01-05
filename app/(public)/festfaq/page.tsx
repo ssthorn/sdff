@@ -97,17 +97,16 @@ function FaqGroup({
   groupKey: string;
 }) {
   return (
-    <section className="mt-10 sm:mt-12">
+    <section className="mt-6">
       {/* Section header like the mock */}
       <div className="text-center">
-        <h2 className="font-rowdies font-bold uppercase text-[#03ABFE] text-lg sm:text-xl tracking-[0.08em]">
+        <h2 className="font-rowdies font-light uppercase text-[#03ABFE] text-2xl tracking-tight">
           {title}
         </h2>
-        <div className="mt-2 h-1.5 w-[86%] max-w-[640px] mx-auto rounded-full bg-[#03ABFE]" />
       </div>
 
       <div
-        className="mt-4 rounded-[14px] overflow-hidden shadow-[0_10px_22px_rgba(0,0,0,0.14)]"
+        className="mt-2 rounded-[14px] overflow-hidden shadow-[0_10px_22px_rgba(0,0,0,0.14)]"
         style={{ backgroundColor: BLUE }}
       >
         {items.map((item, idx) => {
@@ -496,7 +495,7 @@ export default function FestFaqPage() {
             href="https://filmfreeway.com "
             target="_blank"
             rel="noreferrer"
-            className="hover:underline"
+            className="text-link"
           >
             FilmFreeway
           </a> page.
@@ -532,13 +531,13 @@ export default function FestFaqPage() {
 
   return (
     <main className="bg-white">
-      <section className="mx-auto max-w-[760px] px-4 sm:px-6 lg:px-8 pt-10 sm:pt-12 pb-16">
+      <section className="mx-auto max-w-[760px] px-4 pt-6 sm:pt-12 pb-16">
         {/* Page Title */}
         <div className="text-center">
-          <h1 className="font-rowdies uppercase font-bold text-black text-[22px] sm:text-3xl tracking-[0.02em]">
+          <h1 className="faq-h1-black">
             Festival Attendance
           </h1>
-          <p className="mt-2 text-black text-sm sm:text-base">
+          <p className=" text-black text-xl">
             Frequently Asked Questions
           </p>
         </div>

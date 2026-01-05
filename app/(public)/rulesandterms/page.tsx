@@ -7,40 +7,40 @@ export const metadata = {
 export default function RulesAndTermsPage() {
   return (
     <main className="bg-white">
-      <section className="mx-auto max-w-[980px] px-4 sm:px-6 lg:px-8 pt-10 sm:pt-12 pb-16">
+      <section className="mx-auto max-w-[980px] px-4  pt-6  pb-16">
         {/* Page title */}
         <div className="text-center">
-<h1 className="text-center font-rowdies text-[38px] font-light uppercase tracking-wide text-[#00AEEF] sm:text-[52px]">            Rules &amp; Terms
+<h1 className="contact-h1-blue">            Rules &amp; Terms
           </h1>
         </div>
 
         {/* Body */}
-        <article className="mx-auto mt-8 max-w-[760px] text-black">
+        <article className="mx-auto mt-6 max-w-[760px] text-black">
           {/* AGREEMENT */}
-          <h2 className="font-arial uppercase font-bold text-[13px] tracking-[0.05em]">
+          <h2 className="font-arial uppercase font-bold text-[13px] tracking-tight">
             Agreement
           </h2>
 
-          <div className="mt-3 space-y-3 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6">
-            <p>
+          <div className="mt-0 space-y-3 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6">
+            <p className="contact-p-body">
               By submitting to the Film Festival, Screenplay Contest, or any
               associated events or services, all submitters and participants
               acknowledge and agree to comply with all the terms, conditions,
               and regulations set forth in this Agreement.
             </p>
-            <p>
+            <p className="contact-p-body">
               By use of this website and/or any associated services, all users
               acknowledge and agree to comply with all the terms, conditions,
               and regulations set forth in this Agreement.
             </p>
-            <p>
+            <p className="contact-p-body">
               This Agreement, along with any additional terms governing
               submissions, purchases, ticket sales, contest entries, festival
               attendance, participation, and use of the festival website (and
               affiliated websites), constitutes the entire agreement between the
               parties.
             </p>
-            <p>
+            <p className="contact-p-body">
               These terms will remain in effect even after termination or
               expiration of the agreement. If any provision is deemed invalid or
               unenforceable, that provision will be severed from the Agreement,
@@ -54,12 +54,12 @@ export default function RulesAndTermsPage() {
           </div>
 
           {/* RULES AND REGULATIONS */}
-          <h2 className="mt-8 font-arial uppercase font-bold text-[13px] tracking-[0.05em]">
+          <h2 className="mt-6 font-arial uppercase font-bold text-[13px] tracking-tight">
             Rules and Regulations
           </h2>
 
-          <ol className="mt-3 space-y-3 pl-5 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6 list-decimal">
-            <li>
+          <ol className="mt-0 space-y-3 pl-5 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6 list-decimal">
+            <li  className="contact-p-body">
               <span className="font-semibold">Eligibility:</span> Participants
               in any festival competition or event must be at least 18 years
               old. Entries are void where prohibited by law. Entry fees must be
@@ -67,14 +67,14 @@ export default function RulesAndTermsPage() {
               by festival judges, readers, screeners, programmers, and the event
               director are final.
             </li>
-            <li>
+            <li className="contact-p-body">
               <span className="font-semibold">Submission Authorization:</span>{" "}
               By submitting or screening a project at the festival, the
               submitter confirms that all listed creators, owners, and rights
               holders have authorized the submission and its public screening or
               other use at the festival.
             </li>
-            <li>
+            <li className="contact-p-body">
               <span className="font-semibold">Originality and Copyright:</span>{" "}
               By submitting your project, you confirm that it is your original
               work or that you hold the necessary ownership and copyright and
@@ -83,12 +83,12 @@ export default function RulesAndTermsPage() {
               equally among the creators listed in the submission at the time of
               acceptance.
             </li>
-            <li>
+            <li className="contact-p-body">
               <span className="font-semibold">Materials:</span> Do not send
               original master copies. The festival is not responsible for any
               lost or damaged materials.
             </li>
-            <li>
+            <li className="contact-p-body">
               <span className="font-semibold">Disruptive Conduct:</span> Any
               participant, attendee, or associate who engages in disruptive,
               aggressive, or threatening behavior towards any festival member,
@@ -97,7 +97,7 @@ export default function RulesAndTermsPage() {
               and their associates may be removed from the festival and its
               events.
             </li>
-            <li>
+            <li className="contact-p-body">
               <span className="font-semibold">Submission and Screening:</span>{" "}
               Submission does not guarantee acceptance, screening, awards, or
               representation by the festival at any live or online event.
@@ -106,7 +106,7 @@ export default function RulesAndTermsPage() {
               staff, and programmers during the submission season and throughout
               the festival event dates.
             </li>
-            <li>
+            <li className="contact-p-body">
               <span className="font-semibold">Schedule Changes:</span> All
               submission deadlines, contest deadlines, notification dates, and
               event dates (live and online) are subject to change without notice
@@ -115,13 +115,13 @@ export default function RulesAndTermsPage() {
               carpets) may be delayed, canceled, or rescheduled at the
               festival’s discretion, without refund or prior notice.
             </li>
-            <li>
+            <li className="contact-p-body">
               <span className="font-semibold">Refunds:</span> All submission fees
               and purchases, including event, party, and screening tickets, are
               final and non-refundable. This policy applies to payments made to
               the festival, affiliated services, and the Screenplay Contest.
             </li>
-            <li>
+            <li className="contact-p-body">
               <span className="font-semibold">Shipping and Delivery:</span> The
               festival is not responsible for lost, misplaced, or damaged shipped
               or messengered items. This includes materials delivered to rented
@@ -129,7 +129,7 @@ export default function RulesAndTermsPage() {
               print, BluRay, DVD, press materials, hard drives) may not be
               returned.
             </li>
-            <li>
+            <li className="contact-p-body">
               <span className="font-semibold">Film Print/DCP Handling:</span> The
               submitter is responsible for handling all film print and
               professional DCP returns, drop-offs, and pick-ups — in
@@ -142,11 +142,11 @@ export default function RulesAndTermsPage() {
           </ol>
 
           {/* RIGHT TO ENTER */}
-          <h2 className="mt-8 font-arial uppercase font-bold text-[13px] tracking-[0.05em]">
+          <h2 className="mt-6 font-arial uppercase font-bold text-[13px] tracking-tight">
             Right To Enter
           </h2>
-          <div className="mt-3 space-y-3 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6">
-            <p>
+          <div className="mt-0 space-y-3 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6">
+            <p className="contact-p-body">
               Entrants warrant that they possess the legal right to submit their
               work to the festival. As submitter of the film or screenplay,
               entrants represent that the film is original, does not violate any
@@ -154,7 +154,7 @@ export default function RulesAndTermsPage() {
               components. Submitted films must not be involved in any ongoing or
               threatened legal action.
             </p>
-            <p>
+            <p className="contact-p-body">
               All submitted films are presumed by the festival to be not involved
               in any ongoing or threatened legal action and by submitting a film
               project to the festival entrants (“submitter”) assumes the total
@@ -168,16 +168,16 @@ export default function RulesAndTermsPage() {
           </div>
 
           {/* TERMS OF USE */}
-          <h2 className="mt-8 font-arial uppercase font-bold text-[13px] tracking-[0.05em]">
+          <h2 className="mt-6 font-arial uppercase font-bold text-[13px] [0.05em]tracking-">
             Terms of Use
           </h2>
-          <div className="mt-3 space-y-3 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6">
-            <p>
+          <div className="mt-0 space-y-3 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6">
+            <p className="contact-p-body">
               Failure to comply with any festival guidelines, rules, or
               regulations may result in disqualification and removal from
               competition or screenings.
             </p>
-            <p>
+            <p className="contact-p-body">
               By submitting, you confirm that you have read, understood, and
               agreed to these Terms of Use and the Rules and Regulations, and
               that all members of your team will comply with them. You must
@@ -185,21 +185,21 @@ export default function RulesAndTermsPage() {
             </p>
 
             <ul className="mt-2 list-disc pl-5 space-y-2">
-              <li>
+              <li className="contact-p-body">
                 <span className="font-semibold">Release and Hold Harmless:</span>{" "}
                 You agree to release and hold harmless the festival, its
                 directors, staff, volunteers, and partners from any claims,
                 damages, or actions arising from your participation, attendance,
                 and/or submission to the festival.
               </li>
-              <li>
+              <li className="contact-p-body">
                 <span className="font-semibold">Use of Materials:</span> You
                 grant the festival the right to use screen grabs, stills, and
                 press materials for promotional purposes for at least 25 months
                 before the festival and for 6 years after the festival year you
                 submitted to.
               </li>
-              <li>
+              <li className="contact-p-body">
                 <span className="font-semibold">Screening Rights:</span> You
                 grant the festival the right to screen your film publicly for at
                 least one time and up to two times in association with the
@@ -209,17 +209,17 @@ export default function RulesAndTermsPage() {
                 in which case the right would be granted to screen for up to 28
                 months following your initial submission.
               </li>
-              <li>
+              <li className="contact-p-body">
                 <span className="font-semibold">No Refunds for Technical Difficulties:</span>{" "}
                 The festival is not responsible for films that cannot be screened
                 due to technical difficulties, and no refunds will be issued.
               </li>
-              <li>
+              <li className="contact-p-body">
                 <span className="font-semibold">Festival Rights:</span> The
                 festival reserves the right to refuse service and remove
                 non-compliant participants without refund.
               </li>
-              <li>
+              <li className="contact-p-body">
                 <span className="font-semibold">Use of Film for Promotion:</span>{" "}
                 The festival may use any publicly accessible (available on the
                 internet) trailers (up to 9 minutes in length), stills, and/or
@@ -233,10 +233,10 @@ export default function RulesAndTermsPage() {
           </div>
 
           {/* Remaining sections */}
-          <h2 className="mt-8 font-arial uppercase font-bold text-[13px] tracking-[0.05em]">
+          <h2 className="mt-6 font-arial uppercase font-bold text-[13px] tracking-tight">
             General Terms
           </h2>
-          <p className="mt-3 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6">
+          <p  className="contact-p-body">
             In the event that any provision of this Agreement is deemed
             unenforceable, it shall be severed, and the remaining provisions
             shall remain valid. The festival may assign this Agreement to a third
@@ -246,37 +246,37 @@ export default function RulesAndTermsPage() {
             between the parties.
           </p>
 
-          <h2 className="mt-8 font-arial uppercase font-bold text-[13px] tracking-[0.05em]">
+          <h2 className="mt-6 font-arial uppercase font-bold text-[13px] tracking-tight">
             Governing Law
           </h2>
-          <p className="mt-3 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6">
+          <p className="contact-p-body">
             This Agreement is governed by the laws of the State of California,
             excluding its conflicts of law principles. Any disputes will be
             resolved in the federal or state courts located in California.
           </p>
 
-          <h2 className="mt-8 font-arial uppercase font-bold text-[13px] tracking-[0.05em]">
+          <h2 className="mt-6 font-arial uppercase font-bold text-[13px] tracking-tight">
             International Rules
           </h2>
-          <p className="mt-3 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6">
+          <p className="contact-p-body">
             The festival is administered from the United States. Participants
             from outside the U.S. must comply with applicable local laws. You
             agree not to use festival content in ways prohibited by local laws.
           </p>
 
-          <h2 className="mt-8 font-arial uppercase font-bold text-[13px] tracking-[0.05em]">
+          <h2 className="mt-6 font-arial uppercase font-bold text-[13px] tracking-tight">
             Indemnification
           </h2>
-          <p className="mt-3 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6">
+          <p className="contact-p-body">
             You agree to indemnify and hold harmless the festival, its staff, and
             partners from any claims, expenses, or demands arising from your
             breach of this Agreement or violation of applicable laws.
           </p>
 
-          <h2 className="mt-8 font-arial uppercase font-bold text-[13px] tracking-[0.05em]">
+          <h2 className="mt-6 font-arial uppercase font-bold text-[13px] tracking-tight">
             Risk of Loss
           </h2>
-          <p className="mt-3 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6">
+          <p className="contact-p-body">
             The festival is not responsible for any failures, delays, or
             interruptions related to ordering, delivery, or use of passes,
             tickets, or services. The festival is also not liable for failures
@@ -284,29 +284,29 @@ export default function RulesAndTermsPage() {
             solely at the festival&apos;s discretion.
           </p>
 
-          <h2 className="mt-8 font-arial uppercase font-bold text-[13px] tracking-[0.05em]">
+          <h2 className="mt-6 font-arial uppercase font-bold text-[13px] tracking-tight">
             Trademarks
           </h2>
-          <p className="mt-3 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6">
+          <p className="contact-p-body">
             All trademarks, logos, designs, and service names related to the
             festival are the property of the festival and are protected by U.S.
             trademark law. Unauthorized use of these trademarks is prohibited.
           </p>
 
-          <h2 className="mt-8 font-arial uppercase font-bold text-[13px] tracking-[0.05em]">
+          <h2 className="mt-6 font-arial uppercase font-bold text-[13px] tracking-tight">
             DMCA
           </h2>
-          <p className="mt-3 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6">
+          <p className="contact-p-body">
             The festival adheres to copyright law and handles copyright disputes
             in accordance with the Digital Millennium Copyright Act (DMCA). If
             you believe copyright infringement has occurred, please contact the
             festival with a completed DMCA 512(c)(3) Notice of Infringement form.
           </p>
 
-          <h2 className="mt-8 font-arial uppercase font-bold text-[13px] tracking-[0.05em]">
+          <h2 className="mt-6 font-arial uppercase font-bold text-[13px] tracking-tight">
             Disclaimer of Warranties
           </h2>
-          <p className="mt-3 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6">
+          <p className="contact-p-body">
             The festival makes no representations or warranties about the
             accuracy, completeness, or usefulness of any content on the website
             or in festival materials. The website and event screenings are
@@ -315,21 +315,21 @@ export default function RulesAndTermsPage() {
             purpose.
           </p>
 
-          <h2 className="mt-8 font-arial uppercase font-bold text-[13px] tracking-[0.05em]">
+          <h2 className="mt-6 font-arial uppercase font-bold text-[13px] tracking-tight">
             Limitation of Liability
           </h2>
-          <p className="mt-3 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6">
+          <p className="contact-p-body">
             Under no circumstances will the festival be liable for indirect,
             incidental, special, or punitive damages, including loss of profits,
             arising from the use of the website or participation in festival
             events.
           </p>
 
-          <h2 className="mt-8 font-arial uppercase font-bold text-[13px] tracking-[0.05em]">
+          <h2 className="mt-6 font-arial uppercase font-bold text-[13px] tracking-tight">
             Updates to Agreement
           </h2>
-          <div className="mt-3 space-y-3 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6">
-            <p>
+          <div className="space-y-3 text-[12.5px] leading-[1.55] sm:text-sm sm:leading-6">
+            <p className="contact-p-body">
               Additionally, by submitting to the Film Festival, Screenplay
               Contest, or any associated events or services, submitters and
               participants not only acknowledge and agree to comply with all the
@@ -341,7 +341,7 @@ export default function RulesAndTermsPage() {
               any other festival-connected submission portal service page used to
               submit to the festival.
             </p>
-            <p>
+            <p className="contact-p-body">
               The festival reserves the right to amend these Rules and
               Regulations at any time. The latest version will supersede any
               prior versions. It is recommended that participants review these

@@ -14,11 +14,13 @@ type FaqSection = {
 };
 
 function PlusIcon({ open }: { open: boolean }) {
-  // Simple + / − like the mock
   return (
     <span
       aria-hidden="true"
-      className="ml-4 inline-flex h-7 w-7 items-center justify-center text-white/95"
+      className={[
+        "ml-3 inline-flex h-7 w-7 items-center justify-center",
+        open ? "text-black" : "text-white",
+      ].join(" ")}
     >
       <svg viewBox="0 0 24 24" className="h-6 w-6">
         <path
@@ -39,6 +41,7 @@ function PlusIcon({ open }: { open: boolean }) {
     </span>
   );
 }
+
 
 function AccordionRow({
   id,
@@ -61,14 +64,12 @@ function AccordionRow({
         aria-controls={id}
         onClick={onToggle}
         className={[
-          "w-full",
-          "px-4 sm:px-5",
-          "py-3",
-          "flex items-center justify-between",
+          "w-full flex items-center justify-between",
+          "px-4 sm:px-5 py-3",
           "text-left",
-          "text-white",
           "font-rowdies uppercase tracking-[0.06em]",
           "text-[12px] sm:text-[13px]",
+          open ? "bg-white text-black" : "text-white",
           "focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70",
         ].join(" ")}
       >
@@ -88,390 +89,304 @@ function AccordionRow({
   );
 }
 
+function FaqGroup({
+  title,
+  items,
+  openKeys,
+  onToggle,
+  groupKey,
+}: {
+  title: string;
+  items: { q: string; a: React.ReactNode }[];
+  openKeys: Record<string, boolean>;
+  onToggle: (key: string) => void;
+  groupKey: string;
+}) {
+  const BLUE = "#03ABFE";
+
+  return (
+    <section className="">
+      <div className="text-center">
+        <h2 className="font-rowdies font-light uppercase text-[#03ABFE] text-2xl tracking-tight">
+          {title}
+        </h2>
+      </div>
+
+      <div
+        className="rounded-[14px] overflow-hidden shadow-[0_10px_22px_rgba(0,0,0,0.14)]"
+        style={{ backgroundColor: BLUE }}
+      >
+        {items.map((item, idx) => {
+          const key = `${groupKey}-${idx}`;
+          return (
+            <AccordionRow
+              key={key}
+              id={key}
+              q={item.q}
+              open={!!openKeys[key]}
+              onToggle={() => onToggle(key)}
+            >
+              {item.a}
+            </AccordionRow>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+
+
 export default function FestFaqPage() {
   const sections: FaqSection[] = useMemo(
     () => [
       {
-        title: "Festival Attendance",
+        title: "",
         items: [
           {
-            q: "What Films Are Shown at the Fest?",
-            a: (
-              <>
-                <p>
-                  A curated selection of independent films from all around the
-                  world, released during the current festival season.
-                </p>
-                <p className="mt-3">
-                  Films screening at the festival have either been acquired by
-                  the festival programmers and curators, or had been submitted
-                  for review by our San Diego Film Society Membership and judged
-                  by our Membership as being among the best film submissions of
-                  the past year.
-                </p>
-              </>
-            ),
-          },
+  q: "How to Submit?",
+  a: (
+    <p>
+      Our festival exclusively accepts film submissions via{" "}
+      <a href="https://www.filmfreeway.com" className="text-link">
+        FilmFreeway
+      </a>.
+      <br /><br />
+      We also accept Screenplay Contest submissions through <a href="https://www.filmfreeway.com" className="text-link">
+        FilmFreeway
+      </a>.
+      <br /><br />
+      Submitters may need to create a free account with the submission platform
+      to begin the process. While there is no cost to create an account,
+      FilmFreeway charges submission fees and service fees at the time of
+      submission. These fees are paid directly to the platform and are
+      non-refundable.
+      <br /><br />
+      Submission platforms operate independently and are not affiliated with
+      the festival beyond providing submission services.
+    </p>
+  ),
+}
+,
           {
-            q: "Where Can I Find Screening Times?",
-            a: (
-              <p>
-                Screening Times and locations will be listed in our online and
-                print versions of our Festival Film Program and Event Guide.{" "}
-                <Link href="/filmprogram" className="underline">
-                  (See Film Program)
-                </Link>
-              </p>
-            ),
-          },
+  q: "Submission Deadlines & Fees?",
+  a: (
+    <p>
+      All submission deadlines and fees are listed on our <a href="https://www.filmfreeway.com" className="text-link">
+        FilmFreeway
+      </a> event
+      page for both film projects and screenplay submissions.
+      <br /><br />
+      Incomplete submissions may be disqualified without refund after the
+      Final Deadline of each submission season.
+    </p>
+  ),
+}
+,
           {
-            q: "When Do Screenings Start?",
-            a: (
-              <>
-                <p>
-                  Screenings often begin promptly at the listed start time,
-                  without trailers or pre-show content.
-                </p>
-                <p className="mt-3">
-                  Make sure to plan to arrive, park, get concessions, and be in
-                  your seat at the exact time listed on your ticket to make sure
-                  you see the whole film.
-                </p>
-              </>
-            ),
-          },
+  q: "Selecting a Submission Category?",
+  a: (
+    <p>
+      A full list of submission categories is available on our{" "}
+      <a href="https://www.filmfreeway.com" className="text-link">
+        FilmFreeway
+      </a>{" "}
+      page.
+      <br /><br />
+      If your project fits multiple categories, choose the single category
+      that best represents your work. Festival judges and programmers may
+      reassign submissions to a different category during the review or
+      programming process when appropriate, in order to give the project its
+      best chance for consideration.
+    </p>
+  ),
+}
+,
           {
-            q: "How Early Should I Arrive?",
-            a: (
-              <p>
-                We recommend arriving an hour before the scheduled start time to
-                ensure smooth entry.
-              </p>
-            ),
-          },
+  q: "Project Length?",
+  a: (
+    <p>
+      The festival accepts Feature Length Films, Short Films, Episodic
+      Television, and Streaming Projects.
+      <br /><br />
+      Eligible projects range from over 1 minute up to 4 hours in length.
+      Specific runtime limits vary by category—please review the requirements
+      listed on our <a href="https://www.filmfreeway.com" className="text-link">
+        FilmFreeway
+      </a> page for details.
+    </p>
+  ),
+}
+,
           {
-            q: "Are The Films Rated?",
-            a: (
-              <p>
-                The MPAA is now known as the MPA. Independent films may not have
-                MPA ratings, but we will provide guidance on audience
-                appropriateness whenever possible and we always try to schedule
-                films in groups of similarly themed content and maturity levels
-                as best as we can.
-              </p>
-            ),
-          },
+  q: "Screener Requirements?",
+  a: (
+    <p>
+      All submissions must include an online screener uploaded through
+      <a href="https://www.filmfreeway.com" className="text-link">
+        FilmFreeway
+      </a> for judging and review.
+      <br /><br />
+      Physical media such as DVDs or Blu-rays are not accepted.
+      <br /><br />
+      It is the submitter’s responsibility to ensure that all screener links
+      remain active and viewable from submission through final judging
+      notifications.
+    </p>
+  ),
+}
+,
           {
-            q: "Will There Be Q&A’s After Every Film?",
-            a: (
-              <>
-                <p>
-                  Not all films screening at the festival will have Q&amp;As
-                  before or after the film. As often as can be accomplished, the
-                  festival does try to have Q&amp;A events.
-                </p>
-                <p className="mt-3">
-                  Feature Films with high attendance very often have Q&amp;A’s.
-                  Short Films often screen in programming blocks containing many
-                  films (which can create logistical and audience issues that
-                  can complicate or negate Q&amp;A possibilities.)
-                </p>
-                <p className="mt-3">
-                  Q&amp;A availability always depends on multiple factors
-                  including filmmaker requests, guest speaker attendance, host
-                  attendance and availability, audience size, and festival &amp;
-                  venue programming and scheduling concerns.
-                </p>
-              </>
-            ),
-          },
+  q: "Premiere Status?",
+  a: (
+    <p>
+      World Premiere status is not required for submission or acceptance.
+      Projects are evaluated independently of premiere or exclusivity status.
+      <br /><br />
+      However, to help maximize attendance, we recommend avoiding screenings
+      within a 75-mile radius for at least four months before and/or after any
+      festival screening.
+    </p>
+  ),
+}
+,{
+  q: "International Projects?",
+  a: (
+    <p>
+      We accept submissions from all countries. Non-English language projects
+      must include English subtitles.
+      <br /><br />
+      Please note that fee waivers are not available for international
+      submissions.
+    </p>
+  ),
+},{
+  q: "Works-in-Progress?",
+  a: (
+    <p>
+      Work-in-progress submissions are welcome.
+      <br /><br />
+      Please clearly label the project as a work-in-progress and specify which
+      elements are incomplete at the time of submission.
+      <br /><br />
+      All accepted projects must be fully completed prior to screening, as the
+      festival cannot exhibit unfinished films.
+    </p>
+  ),
+}
+,{
+  q: "Age Requirements?",
+  a: (
+    <p>
+      Individuals aged 18 or older may submit directly.
+      <br /><br />
+      Submissions from minors must be completed by a parent or legal guardian
+      on their behalf.
+    </p>
+  ),
+},{
+  q: "Student Submissions?",
+  a: (
+    <p>
+      Information regarding student submissions, eligibility, and discounts
+      (if available) can be found on our <a href="https://www.filmfreeway.com" className="text-link">
+        FilmFreeway
+      </a> page.
+    </p>
+  ),
+}
+,{
+  q: "Multiple Submissions?",
+  a: (
+    <p>
+      Multiple projects may be submitted, provided each submission meets all
+      eligibility requirements.
+      <br /><br />
+      Each project must be submitted separately through <a href="https://www.filmfreeway.com" className="text-link">
+        FilmFreeway
+      </a> and
+      requires its own submission fee. Acceptance of one project does not
+      affect the status of other submissions.
+    </p>
+  ),
+}
+, {
+  q: "Film Ratings?",
+  a: (
+    <p>
+      An official MPA rating is not required for submission.
+      <br /><br />
+      Filmmakers may indicate content advisories or maturity guidance to help
+      inform programming decisions and audience suitability.
+    </p>
+  ),
+}
+,{
+  q: "Resubmitting Projects?",
+  a: (
+    <p>
+      Projects submitted in previous seasons may be resubmitted if they still
+      meet current eligibility criteria.
+      <br /><br />
+      Projects may also be resubmitted within the same season if substantial
+      changes have been made, such as re-editing or runtime changes.
+    </p>
+  ),
+}
+, {
+  q: "Fees & Waivers?",
+  a: (
+    <>
+      <p>
+        Submission fees are listed on our <a href="https://www.filmfreeway.com" className="text-link">
+        FilmFreeway
+      </a> page.
+      </p>
+      <p className="mt-3">
+        To maintain fairness, the festival does not offer fee waivers.
+      </p>
+      <p className="mt-3 font-semibold">
+        All submission fees are non-refundable under any circumstances.
+      </p>
+    </>
+  ),
+}
+,{
+  q: "Festival Acceptance & Awards?",
+  a: (
+    <p>
+      Submissions are reviewed by multiple judges, programmers, and festival
+      members. Selection is competitive and submission does not guarantee
+      screening or awards.
+      <br /><br />
+      The festival is not a laurel farm. Not all accepted films receive awards,
+      and not all submissions are selected.
+    </p>
+  ),
+},{
+  q: "Policies, Rules & Terms?",
+  a: (
+    <p>
+      All programming and judging decisions are final.
+      <br /><br />
+      For complete and current festival rules, regulations, and terms, please
+      review our{" "}
+      <a href="/rulesandterms" className="text-link">
+        Rules & Terms
+      </a>{" "}
+      page and the official <a href="https://www.filmfreeway.com" className="text-link">
+        FilmFreeway
+      </a> event listing.
+    </p>
+  ),
+}
+
+
+
+
         ],
       },
-      {
-        title: "Tickets & Passes",
-        items: [
-          {
-            q: "How Can I Purchase Tickets?",
-            a: (
-              <p>
-                Tickets and passes can be purchased exclusively online through
-                our ticketing platform.{" "}
-                <Link href="/filmprogram" className="underline">
-                  (See Film Program)
-                </Link>
-              </p>
-            ),
-          },
-          {
-            q: "When Should I Buy My Tickets?",
-            a: (
-              <>
-                <p>
-                  It is recommended to purchase tickets online and in advance —
-                  in order to best secure your spot and to avoid potential
-                  ticketing sell-outs.
-                </p>
-                <p className="mt-3">
-                  Tickets go on-sale generally about 3–10 weeks prior to the
-                  festival dates. Information about where to buy tickets will be
-                  released on our festival website on our social media accounts
-                  as we get closer to our festival event dates.
-                </p>
-              </>
-            ),
-          },
-          {
-            q: "Can I Buy Tickets At The Door?",
-            a: (
-              <p>
-                A limited number of tickets are generally available on-site, but
-                availability is not guaranteed as venues often have different
-                and changing policies about on-site sales. To be certain of
-                attendance, it is recommended that you purchase your tickets
-                online in advance.
-              </p>
-            ),
-          },
-          {
-            q: "What If A Screening Is Sold Out?",
-            a: (
-              <>
-                <p>
-                  Some events do sell out with no more tickets available.
-                  However, in some instances additional tickets may be released
-                  at the door due to an additional screening or a move to a
-                  larger venue.
-                </p>
-                <p className="mt-3">
-                  Any additional tickets released on-sale or additional
-                  screenings will be announced online (and by email to
-                  filmmakers), as well as on our social media accounts.
-                </p>
-                <p className="mt-3">
-                  Additionally, all festival attendees are free to contact our
-                  Box Office Staff in person (45 minutes prior to the start of
-                  any sold-out screening or event) to inquire about last minute
-                  rush tickets. Availability varies and is not guaranteed.
-                </p>
-                <p className="mt-3">
-                  Sold Out may simply mean that an event or film screening is
-                  fully Sold Out (with no additional seats available). If there
-                  is a film you truly must see in person, it is highly
-                  recommended to purchase tickets as soon as possible.
-                </p>
-              </>
-            ),
-          },
-          {
-            q: "Do I Need A Ticket Or Pass For All Events?",
-            a: <p>Yes, a ticket or pass is required to attend any screening or event.</p>,
-          },
-          {
-            q: "Are Single-Screening Tickets Available?",
-            a: (
-              <>
-                <p>Yes, individual tickets for screenings are available.</p>
-                <p className="mt-3">
-                  However, for screening blocks containing multiple films (short
-                  films are often screened in programming blocks with other
-                  shorts), the festival kindly asks that you stay for the entire
-                  programming block, to avoid disrupting the event.
-                </p>
-              </>
-            ),
-          },
-          {
-            q: "Can I Bring A Guest?",
-            a: (
-              <p>
-                Yes, but each guest must have their own ticket or pass for each
-                event they want to attend.
-              </p>
-            ),
-          },
-          {
-            q: "Refund Policy?",
-            a: (
-              <>
-                <p>
-                  Refunds are not available for tickets purchased to attend any
-                  screenings or events taking place at the festival.
-                </p>
-                <p className="mt-3">
-                  If you miss your film screening that ticket was still held
-                  from being sold. The festival cannot refund tickets for missed
-                  screenings or changed plans.
-                </p>
-                <p className="mt-3 font-semibold">All ticket and pass sales are final. No Refunds.</p>
-              </>
-            ),
-          },
-          {
-            q: "Applying For Press Coverage?",
-            a: (
-              <p>
-                Press coverage must be pre-approved. Visit our{" "}
-                <Link href="/contact" className="underline">
-                  contact page
-                </Link>{" "}
-                for more details about applying for press accreditation.
-              </p>
-            ),
-          },
-          {
-            q: "Can I Volunteer?",
-            a: (
-              <p>
-                For volunteer opportunities, please visit our{" "}
-                <Link href="/contact" className="underline">
-                  contact page
-                </Link>
-                .
-              </p>
-            ),
-          },
-        ],
-      },
-      {
-        title: "Attendees & Guests",
-        items: [
-          {
-            q: "Who Can Attend The Festival?",
-            a: (
-              <p>
-                The festival is open to everyone, including filmmakers, fans,
-                and general audiences. Only those who are mean and unpleasant to
-                other guests (and our staff and volunteers) are not allowed. : )
-              </p>
-            ),
-          },
-          {
-            q: "Can Minors Attend The Festival?",
-            a: (
-              <p>
-                Yes, minors are welcome but must be accompanied by an adult.
-                Some events may not be suitable for younger audiences.
-              </p>
-            ),
-          },
-          {
-            q: "Will Filmmakers Be Present?",
-            a: (
-              <p>
-                Many filmmakers attend the festival every year (including
-                filmmakers who are not screening films too), but note that
-                filmmaker participation always depends on their individual
-                schedules.
-              </p>
-            ),
-          },
-          {
-            q: "Are There Celebrities Attending?",
-            a: (
-              <>
-                <p>
-                  High-profile attendees have attended festival screenings in
-                  the past, but note that festival participation always depends
-                  on individual schedules and our celebrity filmmakers and
-                  alumni are not guaranteed to attend screenings or events.
-                </p>
-                <p className="mt-3">
-                  High-profile guests often appear unannounced, or are announced
-                  very close to our event dates. This is due to ensuring there
-                  are no last minute scheduling commitments.
-                </p>
-                <p className="mt-3">
-                  Even with this precaution please note that guest appearances
-                  are not guaranteed and are always subject to last minute
-                  cancellation.
-                </p>
-              </>
-            ),
-          },
-          {
-            q: "Is There A Dress Code?",
-            a: (
-              <>
-                <p>
-                  Business Casual attire would be recommended for most festival
-                  events. For more formal occasions, dress to impress.
-                </p>
-                <p className="mt-3">
-                  For film screenings, Casual to Business Casual attire is the
-                  general norm.
-                </p>
-              </>
-            ),
-          },
-        ],
-      },
-      {
-        title: "Venue & Fest Policies",
-        items: [
-          {
-            q: "Phone, Photo & Video Policy?",
-            a: (
-              <>
-                <p>Phone use is not allowed during film screenings.</p>
-                <p className="mt-3">
-                  All photography and video recording (including phone audio and
-                  video recording and photography) is prohibited during
-                  screenings and prohibited in all movie theaters and screening
-                  rooms.
-                </p>
-                <p className="mt-3">
-                  Failure to comply will lead to expulsion from festival events
-                  and screenings. This rule is to make sure the films screened
-                  are not pirated and our venues are firm on this issue.
-                </p>
-                <p className="mt-3">
-                  Professional photography at any part of the festival requires
-                  prior application and approval by the Festival Publicity
-                  Department as well as property ownership.
-                </p>
-              </>
-            ),
-          },
-          {
-            q: "Are Pets Allowed?",
-            a: (
-              <p>
-                Pets usually are not permitted at most festival screenings,
-                parties, ceremonies, or other festival events.
-              </p>
-            ),
-          },
-          {
-            q: "Can I Bring A Service Animal?",
-            a: (
-              <p>
-                Check with each specific venue for the most up to date and
-                accurate details regarding service animal attendance.
-              </p>
-            ),
-          },
-        ],
-      },
-      {
-        title: "Submissions",
-        items: [
-          {
-            q: "How Do I Submit My Film?",
-            a: (
-              <p>
-                All film submissions must be made through the festival <a
-            href="https://filmfreeway.com"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:underline"
-          >
-            FilmFreeway
-          </a> page.
-              </p>
-            ),
-          },
-        ],
-      },
+      
     ],
     []
   );
@@ -487,21 +402,21 @@ export default function FestFaqPage() {
     setOpenKeys((prev) => ({ ...prev, [key]: !prev[key] }));
 
   const BLUE = "#03ABFE"; // sampled from the mock
-
+  const WHITE ="000000"
   return (
-    <main className="bg-white">
-      <section className="mx-auto max-w-[760px] px-4 sm:px-6 lg:px-8 pt-10 sm:pt-12 pb-16">
+    <main className='bg-white'>
+      <section className='mx-auto max-w-[760px] px-4 sm:px-6 lg:px-8 pt-6 sm:pt-12 pb-16'>
         {/* Title block */}
-        <div className="text-center">
-          <h1 className="font-rowdies uppercase font-bold text-black text-[22px] sm:text-3xl tracking-[0.02em]">
-            Film Screenings &amp; Events
+        <div className='text-center'>
+          <h1 className='faq-h1-black'>
+            Film & Screenplay Submissions
           </h1>
-          <p className="mt-2 text-black text-sm sm:text-base">
+          <p className=' text-lg'>
             Frequently Asked Questions
           </p>
 
-          <div className="mt-6">
-            <div className="font-rowdies font-bold uppercase text-[#03ABFE] text-lg sm:text-xl tracking-[0.08em]">
+          <div className='mt-6'>
+            <div className='font-rowdies font-light uppercase text-[#00aaff] text-2xl tracking-tight'>
               Submission F.A.Q.
             </div>
           </div>
@@ -509,42 +424,29 @@ export default function FestFaqPage() {
 
         {/* Accordions */}
         <div
-          className="mt-6 sm:mt-8 rounded-[14px] overflow-hidden shadow-[0_8px_18px_rgba(0,0,0,0.10)]"
-          style={{ backgroundColor: BLUE }}
+          className='rounded-[14px] overflow-hidden shadow-[0_8px_18px_rgba(0,0,0,0.10)]'
+          style={{ backgroundColor: WHITE }}
         >
-          {sections.map((section, si) => (
-            <div key={section.title} className="border-t border-white/25 first:border-t-0">
-              {/* Section label (white background like the mock text blocks) */}
-              <div className="bg-white px-4 sm:px-5 py-3">
-                <h2 className="font-rowdies uppercase font-bold text-black text-[13px] sm:text-sm tracking-[0.06em]">
-                  {section.title}
-                </h2>
-              </div>
+          {sections.map((section) => {
+  const groupKey = section.title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
 
-              <div style={{ backgroundColor: BLUE }}>
-                {section.items.map((item, ii) => {
-                  const key = `${section.title
-                    .toLowerCase()
-                    .replace(/[^a-z0-9]+/g, "-")
-                    .replace(/(^-|-$)/g, "")}-${ii}`;
+  return (
+    <FaqGroup
+      key={section.title}
+      title={section.title}
+      items={section.items}
+      openKeys={openKeys}
+      onToggle={(key) => toggle(key)}
+      groupKey={groupKey}
+    />
+  );
+})}
 
-                  const open = !!openKeys[key];
+<div className="h-6" />
 
-                  return (
-                    <AccordionRow
-                      key={key}
-                      id={key}
-                      q={item.q}
-                      open={open}
-                      onToggle={() => toggle(key)}
-                    >
-                      {item.a}
-                    </AccordionRow>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
         </div>
 
         {/* Footer callout link (as per your spec) */}

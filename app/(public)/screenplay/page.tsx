@@ -11,16 +11,34 @@ type FaqItem = {
 };
 
 function PlusIcon({ open }: { open: boolean }) {
-  // matches the simple + / - vibe from the mock
   return (
-    <span className="relative inline-block h-4 w-4">
-      <span className="absolute left-0 top-1/2 h-0.5 w-4 -translate-y-1/2 bg-white" />
-      {!open && (
-        <span className="absolute left-1/2 top-0 h-4 w-0.5 -translate-x-1/2 bg-white" />
-      )}
+    <span
+      aria-hidden="true"
+      className={[
+        "ml-3 inline-flex h-7 w-7 items-center justify-center",
+        open ? "text-black" : "text-white",
+      ].join(" ")}
+    >
+      <svg viewBox="0 0 24 24" className="h-6 w-6">
+        <path
+          d="M5 12h14"
+          stroke="currentColor"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+        />
+        {!open && (
+          <path
+            d="M12 5v14"
+            stroke="currentColor"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+          />
+        )}
+      </svg>
     </span>
   );
 }
+
 
 function BlueFaq({
   title,
@@ -33,30 +51,46 @@ function BlueFaq({
 }) {
   const [openIndex, setOpenIndex] = useState<number | null>(defaultOpenIndex);
 
-  return (
-    <section className="mx-auto max-w-3xl px-4 sm:px-6">
-      <h2 className="text-center font-rowdies font-light uppercase text-2xl">
-        {title}
-      </h2>
+  const BLUE = "#03ABFE"; // match the other accordion
 
-      <div className="mt-3 rounded-2xl bg-[#0aa6e8] shadow-[0_10px_22px_rgba(0,0,0,0.18)] overflow-hidden">
+  return (
+    <section className="mx-auto max-w-3xl  ">
+      {/* section header like the mock */}
+      <div className="text-center">
+        <h2 className="font-rowdies font-light uppercase text-black text-xl tracking-tight">
+          {title}
+        </h2>
+      </div>
+
+      <div
+        className="mt-2 rounded-[14px] overflow-hidden shadow-[0_10px_22px_rgba(0,0,0,0.14)]"
+        style={{ backgroundColor: BLUE }}
+      >
         {items.map((it, idx) => {
           const open = openIndex === idx;
+
           return (
-            <div key={it.q} className="border-t border-white/35 first:border-t-0">
+            <div key={it.q} className="border-t border-white/25 first:border-t-0">
               <button
                 type="button"
                 onClick={() => setOpenIndex(open ? null : idx)}
-                className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left"
+                aria-expanded={open}
+                className={[
+                  "w-full flex items-center justify-between",
+                  "px-2 py-3",
+                  "text-left",
+                  "font-rowdies font-light tracking-tight",
+                  "text-base",
+                  open ? "bg-white text-black" : "text-white",
+                  "focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70",
+                ].join(" ")}
               >
-                <span className="text-white text-center font-rowdies font-light uppercase text-xl">
-                  {it.q}
-                </span>
+                <span className="pr-2">{it.q}</span>
                 <PlusIcon open={open} />
               </button>
 
               {open && (
-                <div className="bg-white px-5 py-4 text-[12px] sm:text-[13px] leading-relaxed text-black">
+                <div className="bg-white px-4 sm:px-5 py-2 sm:py-4 text-sm leading-5 sm:text-sm sm:leading-6 text-black">
                   {it.a}
                 </div>
               )}
@@ -68,6 +102,7 @@ function BlueFaq({
   );
 }
 
+
 function InfoBox({
   title,
   children,
@@ -77,10 +112,10 @@ function InfoBox({
 }) {
   return (
     <div className="rounded-2xl border border-black/20 bg-white px-6 py-5 shadow-[0_8px_18px_rgba(0,0,0,0.12)]">
-      <h3 className="text-center font-rowdies font-light uppercase text-2xl">
+      <h3 className="text-center font-rowdies font-light uppercase text-xl tracking-tight">
         {title}
       </h3>
-      <div className="mt-3 text-center text-lg">
+      <div className="mission-body mt-2">
         {children}
       </div>
     </div>
@@ -107,17 +142,17 @@ export default function ScreenplayPage() {
         q: "How Do I Submit?",
         a: (
           <>
-            Submissions only available through FilmFreeway.{" "}
-            <span className="whitespace-nowrap">
+            Submissions only available through <span className="whitespace-nowrap">
               <a
-                className="underline font-semibold"
+                className="text-link"
                 href="https://filmfreeway.com"
                 target="_blank"
                 rel="noreferrer"
               >
                 FilmFreeway.com
               </a>
-            </span>
+            </span>.
+            
           </>
         ),
       },
@@ -177,9 +212,9 @@ export default function ScreenplayPage() {
 
   return (
     <main className="bg-white">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-10 pb-14">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-6 pb-14">
         {/* Title */}
-<h1 className="text-center font-rowdies text-[38px] font-light uppercase tracking-wide text-[#00AEEF] sm:text-[52px]">          Screenplay Contest
+<h1 className="contact-h1-blue">          Screenplay Contest
         </h1>
 
         {/* Top "Carousel" image */}
@@ -198,16 +233,25 @@ export default function ScreenplayPage() {
 
         {/* How to enter */}
         <section className="mt-7 text-center">
-          <h2 className="font-rowdies font-light uppercase text-4xl">
+          <h2 className="font-rowdies font-light uppercase text-xl">
             How To Enter Your Screenplay
           </h2>
 
-          <p className="mt-4 mx-auto max-w-2xl text-lg">
+          <p className="mission-body mt-2">
             See our contest submission platform (FilmFreeway) for current
             Screenplay Submission Categories, Fees, and Deadlines.
             <br />
             <br />
-            Submissions available through FilmFreeway.
+            Submissions available through <span className="whitespace-nowrap">
+              <a
+                className="text-link"
+                href="https://filmfreeway.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                FilmFreeway.com
+              </a>
+            </span>.
           </p>
 
           {/* FilmFreeway black button */}
@@ -280,7 +324,7 @@ export default function ScreenplayPage() {
 
         {/* Notebook image */}
         <div className="mt-10 mx-auto max-w-3xl">
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-[0_10px_22px_rgba(0,0,0,0.18)]">
+          <div className="relative w-full aspect-video  overflow-hidden ">
             <Image
               src="/screenplay/3.) SP_notebook.jpg"
               alt="Notebook"
@@ -292,35 +336,60 @@ export default function ScreenplayPage() {
         </div>
 
         {/* Award categories */}
-        <section className="mt-10 text-center px-4">
-          <h2 className="font-rowdies font-light uppercase text-black text-4xl">
+        <section className="mt-6 text-center px-4">
+          <h2 className="font-rowdies font-light uppercase text-2xl">
             Screenplay
             <br className="sm:hidden" /> Award Categories
           </h2>
 
           <div className="mt-4 text-2xl">
-            <div className="font-semibold">Best Screenplay</div>
-            <div className="text-black/70 italic text-base">1st Place Grand Prize Winner</div>
+            <div className="">
+              <h3 className="font-semibold italic">
+                Best Screenplay
+                <br />
+                <span className="block font-normal text-xs leading-2">1st Place Grand Prize Winner</span>
+                </h3>
+              </div>
 
-            <div className="mt-4">Best Screenplay</div>
-            <div className="text-black/70 italic text-base">- 1st Runner Up -</div>
+              <div className="mt-4">
+              <h3 className="text-lg">
+                Best Screenplay
+                <br />
+                <span className="block font-normal text-xs leading-2">- 1st Runner Up -</span>
+                </h3>
+              </div>
 
-            <div className="mt-4">Best Screenplay</div>
-            <div className="text-black/70 italic text-base">- 2nd Runner Up -</div>
+              <div className="mt-4">
+              <h3 className="text-lg">
+                Best Screenplay
+                <br />
+                <span className="block font-normal text-xs leading-2">- 2nd Runner Up -</span>
+                </h3>
+              </div>
 
-            <div className="mt-4">Best Teleplay</div>
-            <div className="mt-4">Best Short Teleplay</div>
+              <div className="mt-4">
+              <h3 className="text-lg">
+                Best Teleplay</h3>
+              </div>
+
+              <div className="mt-4">
+              <h3 className="text-lg">
+                Best Short Teleplay</h3>
+              </div>
+            
+
+            
           </div>
         </section>
 
         {/* FAQ */}
-        <div className="mt-10">
-          <BlueFaq title="Screenplay Submission F.A.Q." items={FAQ_ITEMS} />
+        <div className="mt-6">
+          <BlueFaq title="Screenplay Submission F.A.Q." items={FAQ_ITEMS}/>
         </div>
 
         {/* VW Bus image */}
         <div className="mt-10 mx-auto max-w-3xl">
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-[0_10px_22px_rgba(0,0,0,0.18)]">
+          <div className="relative w-full aspect-video overflow-hidden shadow-[0_10px_22px_rgba(0,0,0,0.18)]">
             <Image
               src="/screenplay/4.) VlW BusNEWM.png"
               alt="VW Bus on the beach"
@@ -334,7 +403,7 @@ export default function ScreenplayPage() {
         {/* Small helper links (optional; remove if you don't want) */}
         <div className="mt-8 text-center text-[11px] text-black/60">
           Looking for tickets?{" "}
-          <Link href="/filmprogram" className="underline font-semibold">
+          <Link href="/filmprogram" className="text-link">
             Festival Film Program &amp; Event Guide
           </Link>
         </div>

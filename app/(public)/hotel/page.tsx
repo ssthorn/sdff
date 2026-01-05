@@ -164,8 +164,8 @@ function HotelCard({ item }: { item: HotelItem }) {
 export default function HotelPage() {
   return (
     <main className="bg-white">
-      <div className="mx-auto w-full max-w-[1120px] px-4 pb-16 pt-10 sm:px-6">
-        <h1 className="text-center font-rowdies text-[38px] font-light uppercase tracking-wide text-[#00AEEF] sm:text-[52px]">
+      <div className="mx-auto w-full max-w-[1120px] px-4 pb-16 pt-6">
+        <h1 className="text-center font-rowdies text-3xl font-light uppercase tracking-tight text-[#00AEEF]">
           Hotels
         </h1>
 
