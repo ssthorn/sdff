@@ -143,6 +143,15 @@ body {
   }
 }
 @layer components {
+  .lightest-blue {
+    @apply text-[#90ddff];
+  }
+  .middle-blue {
+    @apply text-[#66ccff];
+  }
+  .darkest-blue {
+    @apply text-[#00aaff];
+  }
   .mission-page {
     @apply bg-white pb-12;
   }

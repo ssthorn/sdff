@@ -28,7 +28,7 @@ export default function FloatingMenuButton({
           : "opacity-0 pointer-events-none",
       ].join(" ")}
     >
-      <span className="text-black text-2xl leading-none">
+      <span className="text-black text-2xl leading-none items-center">
         {open ? "✕" : "☰"}
       </span>
     </button>

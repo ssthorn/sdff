@@ -64,7 +64,7 @@ export default function HeroSlideshow() {
   };
 
   return (
-    <section className="relative w-full w-border-b border-black/10">
+    <section className="relative w-full w-border-b border-black/10  mx-auto">
       <div className="relative w-full aspect-video max-h-[640px] overflow-hidden">
         {SLIDES.map((slide, i) => (
           <div
@@ -89,16 +89,18 @@ export default function HeroSlideshow() {
 
         {/* overlay text bar – keeps same proportion on all breakpoints */}
         <div className="absolute inset-x-0 bottom-0">
-          <div className="h-[26%] bg-black/40 flex items-center">
-            <div className="w-full max-w-6xl mx-auto px-4 sm:px-8 md:px-12 pb-4">
-              <div className="text-right ">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-racing font-light italic text-white leading-tight">
+          <div className="h-[26%] bg-black/20 flex items-center">
+            <div className="w-full max-w-6xl mx-auto px-4 md:px-12 pb-1 md:pb-4 md:pt-1">
+              <div className="text-right">
+                <h1 className="text-2xl md:text-5xl lg:text-6xl font-racing font-light italic text-white leading-7 md:leading-15">
                   Lights, Camera, Coastline
-                </h1>
-                <p className="mt-2 text-lg sm:text-base md:text-3xl font-rowdies font-light text-white tracking-wide">
+                  <br />
+                  <span className="mt-2 text-sm md:text-4xl font-rowdies font-semibold md:font-light text-white tracking-tight not-italic">
                   TICKETS &amp; PASSES –{" "}
-                  <span className="text-[#90ddff] text-lg md:text-3xl font-light"> On Sale In Nov</span>
-                </p>
+                  <span className="darkest-blue text-sm md:text-4xl font-semibold md:font-light"> On Sale In Nov</span>
+                </span>
+                </h1>
+                
               </div>
             </div>
           </div>

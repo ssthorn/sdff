@@ -45,7 +45,7 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="relative w-full font-rowdies border-b-4 border-black"
+      className="relative w-full font-rowdies border-b-4 border-black md:max-w-6xl md:mx-auto"
     >
       {/* --- TOP STRIPE (DESKTOP NAV + MOBILE TRIGGER) --- */}
       <div

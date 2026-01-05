@@ -717,7 +717,7 @@ function scrollToSection(id: NeighborhoodId) {
 function TourismCard({ place }: { place: TourismPlace }) {
   const cardInner = (
     <>
-      <div className="relative w-full h-64 sm:h-72 overflow-hidden rounded-t-md">
+      <div className="relative w-full h-64 overflow-hidden rounded-t-md">
         <Image
           src={place.imageSrc}
           alt={place.imageAlt}
@@ -725,7 +725,7 @@ function TourismCard({ place }: { place: TourismPlace }) {
           className="object-cover"
         />
       </div>
-      <div className="px-5 pb-5 pt-4 text-center">
+      <div className="px-5 pb-4 pt-4 text-center">
         <h3 className="tourism-place-title">
           {place.title}
         </h3>
@@ -736,7 +736,7 @@ function TourismCard({ place }: { place: TourismPlace }) {
           </p>
         )}
         {place.address && (
-          <p className="tourism-place-address">
+          <p className="tourism-place-address translate-y-2">
             {place.address}
           </p>
         )}
@@ -776,20 +776,20 @@ export default function TourismPage() {
       <div id="top" />
 
      {/* TITLE */}
-<section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-2">
+<section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
   <h1 className="tourism-page-title">SAN DIEGO TOURISM</h1>
 </section>
 
 {/* STICKY NEIGHBORHOOD CONTROL */}
-<div className="sticky top-4 sm:top-6 md:top-8 z-30  ">
+<div className="sticky top-10 z-30  ">
 
   <div className=" ">
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 ">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-0 ">
       <div className="flex justify-center ">
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className=" bg-white/80 backdrop-blur-soft mb-4 border-b-2 border-[#06a9ff] w-full max-w-xs sm:max-w-sm  py-3 px-4 flex items-center justify-center text-base"
+          className=" bg-white/80 backdrop-blur-soft mb-4 border-b-2 border-[#00aaff] w-[70%] max-w-xs sm:max-w-sm  py-3 px-4 flex items-center justify-center text-base"
         >
           <span className="text-[#0077cc] hover:italic ">Search By Neighborhood</span>
           <span className="text-xl leading-none">{open ? "✕" : null}</span>
@@ -806,7 +806,7 @@ export default function TourismPage() {
           <div className="fixed inset-0 z-40 flex items-start justify-center pt-10 sm:pt-10 bg-black/30">
             <div className="w-full max-w-xs sm:max-w-sm bg-white border border-black shadow-xl">
               <div className="flex items-center justify-between  px-4 py-3 border-b border-black/15">
-                <span className=" text-base tracking-wide text-[#0077cc] ">
+                <span className=" text-base tracking-wide text-[#0077cc] w-full text-center">
                   Search By Neighborhood
                 </span>
                 <button

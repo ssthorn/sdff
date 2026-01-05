@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         ].join(" ")}
       >
         <Header />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen md:max-w-6xl mx-auto">{children}</main>
         <Footer />
       </body>
     </html>

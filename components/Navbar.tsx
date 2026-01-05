@@ -3,15 +3,16 @@
 
 import Link from "next/link";
 import { NAV_GROUPS } from "./navConfig";
+import { ChevronUp } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center gap-6 text-sm lg:text-sm font-rowdies text-white">
+    <nav className='flex items-center gap-6 text-base font-rowdies text-black'>
       {NAV_GROUPS.map((group) => (
-        <div key={group.key} className="relative group">
+        <div key={group.key} className='relative group'>
           <button
-            type="button"
-            className="
+            type='button'
+            className='
               inline-flex items-center
               uppercase font-light
               px-3 py-2
@@ -20,16 +21,30 @@ export default function Navbar() {
               group-hover:bg-white group-hover:text-black
               group-hover:border-black/10 group-hover:shadow-lg
               group-hover:border-b-0
-            "
+            '
           >
-            {group.label}
+            <span className='inline-flex items-center gap-2'>
+              {group.label}
+
+              <ChevronUp
+                className='
+      h-5 w-5
+      opacity-0
+      font-bold
+      translate-y-.5
+      transition-all duration-150
+      group-hover:opacity-100
+      group-hover:translate-y-0
+    '
+              />
+            </span>
           </button>
 
           {/* Hover bridge to prevent flicker when moving mouse down */}
-          <div className="absolute left-0 right-0 top-full h-2" />
+          <div className='absolute left-0 right-0 top-full h-2' />
 
           <div
-            className="
+            className='
               absolute left-0 top-full
               mt-0
               min-w-full
@@ -41,16 +56,16 @@ export default function Navbar() {
               group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
               origin-top-left
               z-30
-            "
+            '
           >
             {group.links.map((item) =>
               item.external ? (
                 <a
                   key={item.label}
                   href={item.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="
+                  target='_blank'
+                  rel='noreferrer'
+                  className='
                     block
                     px-3 py-1.5
                     text-[11px] lg:text-xs
@@ -58,7 +73,7 @@ export default function Navbar() {
                     leading-tight
                     whitespace-nowrap
                     hover:bg-black/5
-                  "
+                  '
                 >
                   {item.label}
                 </a>
@@ -66,7 +81,7 @@ export default function Navbar() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="
+                  className='
                     block
                     px-3 py-1.5
                     text-[11px] lg:text-xs
@@ -74,7 +89,7 @@ export default function Navbar() {
                     leading-tight
                     whitespace-nowrap
                     hover:bg-black/5
-                  "
+                  '
                 >
                   {item.label}
                 </Link>
