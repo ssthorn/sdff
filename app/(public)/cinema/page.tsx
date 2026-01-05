@@ -92,13 +92,13 @@ function CinemaCard({ cinema }: { cinema: Cinema }) {
     <article className="rounded-[12px] border border-black/35 bg-white overflow-hidden shadow-[0_6px_18px_rgba(0,0,0,0.18)]">
       {/* Title bar */}
       <div className="px-4 py-2.5 text-center border-b border-black/25">
-        <h3 className="font-rowdies font-bold text-[13px] sm:text-[14px] uppercase tracking-[0.08em]">
+        <h3 className="cinema-card-title">
           {cinema.name}
         </h3>
       </div>
 
       {/* Image */}
-      <div className="relative w-full aspect-[16/10] bg-black/5">
+      <div className="relative w-full aspect-square bg-black/5">
         <Image
           src={cinema.imageSrc}
           alt={cinema.name}
@@ -111,7 +111,7 @@ function CinemaCard({ cinema }: { cinema: Cinema }) {
 
       {/* Info */}
       <div className="px-4 pt-3 pb-4">
-        <div className="text-[11px] sm:text-[12px] leading-snug text-black/90 whitespace-pre-line">
+        <div className="text-sm leading-tight text-black/90 whitespace-pre-line">
           {cinema.address}
         </div>
 
@@ -119,12 +119,12 @@ function CinemaCard({ cinema }: { cinema: Cinema }) {
           href={cinema.href}
           target="_blank"
           rel="noreferrer"
-          className="mt-1 block text-[10px] sm:text-[11px] text-cyan-700 hover:underline underline-offset-2 break-words"
+          className="mt-1 block text-xs text-cyan-700 hover:underline underline-offset-2 wrap-break-word"
         >
           {cinema.hrefLabel}
         </Link>
 
-        <p className="mt-2 text-[11px] sm:text-[12px] leading-snug text-black/85">
+        <p className="mt-2 text-sm leading-tight text-black/85">
           {cinema.description}
         </p>
       </div>
@@ -139,11 +139,10 @@ export default function CinemaPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-4 pt-8 sm:pt-10 pb-10">
           {/* Page title */}
           <div className="text-center mb-6 sm:mb-8">
-            <h1 className="font-rowdies font-bold uppercase text-2xl sm:text-3xl tracking-[0.08em]">
-              <span className="text-[#7bd4ff]">San Diego</span>{" "}
-              <span className="text-[#00aaff]">Cinemas</span>
+            <h1 className="cinema-h1-blue">
+              <span className="">San Diego</span>{" "}
+              <span className="">Cinemas</span>
             </h1>
-            <div className="mt-3 h-0.5 w-20 bg-[#00aaff] mx-auto" />
           </div>
 
           {/* Cards */}

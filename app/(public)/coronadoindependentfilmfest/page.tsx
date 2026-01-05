@@ -3,23 +3,25 @@ import Link from "next/link";
 
 export default function CoronadoIndependentFilmFestPage() {
   return (
-    <main className="mx-auto w-full max-w-5xl px-4 pb-16">
+    <main className="mx-auto w-full max-w-5xl px-2 pb-10">
       {/* Page title block */}
-      <header className="py-10 text-center">
-        <h1 className="font-rowdies text-4xl font-extrabold tracking-wide text-sky-500 sm:text-5xl">
+      <header className="pt-4 text-center mb-4">
+        <h1 className="coronado-h1-blue">
           INDEPENDENT
           <br />
           FILM SCREENINGS
-        </h1>
-        <h2 className="mt-2 font-rowdies text-3xl font-extrabold tracking-wide text-black sm:text-4xl">
+          <br />
+          <span className="coronado-h1-blue text-black">
           CORONADO ISLAND
-        </h2>
+        </span>
+        </h1>
+        
       </header>
 
       {/* Image 1 */}
       <section className="w-full">
-        <div className="relative w-full overflow-hidden rounded-sm border border-black/20">
-          <div className="relative aspect-[16/9] w-full sm:aspect-[21/9]">
+        <div className="relative w-full overflow-hidden">
+          <div className="relative aspect-video w-full sm:aspect-21/9">
             <Image
               src="/coronado/1.) Hotel Coronado NEWM.JPG"
               alt="Hotel del Coronado"
@@ -31,7 +33,7 @@ export default function CoronadoIndependentFilmFestPage() {
           </div>
         </div>
 
-        <p className="mx-auto mt-6 max-w-3xl text-center text-sm leading-relaxed text-black/80 sm:text-base">
+        <p className="coronado-p-body mt-6">
           Several times each year the{" "}
           <span className="font-semibold text-black">
             San Diego Independent Film Society
@@ -42,18 +44,18 @@ export default function CoronadoIndependentFilmFestPage() {
       </section>
 
       {/* Tickets & Passes */}
-      <section className="mt-12 text-center">
-        <h3 className="font-rowdies text-3xl font-extrabold tracking-wide text-sky-500 sm:text-4xl">
+      <section className="mt-6 text-center">
+        <h3 className="coronado-h1-blue">
           TICKETS &amp; PASSES
         </h3>
 
-        <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-black/80 sm:text-base">
+        <p className="coronado-p-body mt-2">
           Upcoming Coronado Island film screening &amp; film event updates with
           event screening times will be posted on social media as they are
           scheduled.
         </p>
 
-        <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-black/80 sm:text-base">
+        <p className="coronado-p-body mt-6">
           Check out upcoming{" "}
           <span className="font-semibold text-black">
             Coronado Island Independent Film Screenings
@@ -63,7 +65,7 @@ export default function CoronadoIndependentFilmFestPage() {
             href="https://www.eventive.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sky-700 underline underline-offset-2"
+            className="text-sky-700 hover:underline"
           >
             here
           </Link>
@@ -73,8 +75,8 @@ export default function CoronadoIndependentFilmFestPage() {
 
       {/* Image 2 */}
       <section className="mt-10 w-full">
-        <div className="relative w-full overflow-hidden rounded-sm border border-black/20">
-          <div className="relative aspect-[16/9] w-full sm:aspect-[21/9]">
+        <div className="relative w-full overflow-hidden ">
+          <div className="relative aspect-video w-full sm:aspect-21/9">
             <Image
               src="/coronado/2.) Village Theater NEWM.JPG"
               alt="Village Theater"
@@ -87,19 +89,19 @@ export default function CoronadoIndependentFilmFestPage() {
       </section>
 
       {/* Participate */}
-      <section className="mt-12 text-center">
-        <h3 className="font-rowdies text-3xl font-extrabold tracking-wide text-sky-500 sm:text-4xl">
+      <section className="mt-6 text-center">
+        <h3 className="coronado-h1-blue">
           PARTICIPATE
         </h3>
 
-        <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-black/80 sm:text-base">
+        <p className="coronado-p-body mt-2">
           To submit a film project for review and consideration to screen at
           Coronado Independent Film Fest screening events use{" "}
           <a
             href="https://filmfreeway.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sky-700 underline underline-offset-2"
+            className="text-sky-700 hover:underline"
           >
             FilmFreeway
           </a>{" "}
@@ -120,7 +122,7 @@ export default function CoronadoIndependentFilmFestPage() {
               alt="Click to Submit on FilmFreeway"
               width={520}
               height={160}
-              className="h-auto w-[260px] sm:w-[340px]"
+              className="h-auto w-[180px]"
               priority={false}
             />
           </a>
@@ -128,9 +130,9 @@ export default function CoronadoIndependentFilmFestPage() {
       </section>
 
       {/* Image 3 */}
-      <section className="mt-12 w-full">
-        <div className="relative w-full overflow-hidden rounded-sm border border-black/20">
-          <div className="relative aspect-[16/9] w-full sm:aspect-[21/9]">
+      <section className="mt-6 w-full">
+        <div className="relative w-full overflow-hidden">
+          <div className="relative aspect-4/3 md:aspect-video w-full">
             <Image
               src="/coronado/3.) Beach Party VW NEWM.png"
               alt="Beach party with VW bus"

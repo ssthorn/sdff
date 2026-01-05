@@ -390,6 +390,24 @@ body {
   .awards-laurel-title {
     @apply font-rowdies text-center uppercase text-2xl sm:text-[2rem] text-[#00aaff] leading-tight mt-6;
   }
+  .cinema-h1-blue {
+    @apply font-rowdies font-light text-center text-[2.2rem] sm:text-[2.7rem] md:text-[3rem] text-[#00aaff] uppercase mb-4;
+  }
+  .cinema-card-title {
+    @apply font-rowdies font-light text-2xl;
+  }
+  .contact-h1-blue {
+    @apply font-rowdies font-light text-center text-3xl text-[#00aaff] uppercase mb-4;
+  }
+  .contact-p-body {
+    @apply text-xs leading-3.5 tracking-tight; 
+  }
+  .coronado-h1-blue {
+    @apply font-rowdies font-light text-center text-3xl text-[#00aaff] uppercase;
+  }
+  .coronado-p-body {
+    @apply max-w-[90vw] text-base tracking-tight text-center leading-4.5;
+  }
 }
 
 

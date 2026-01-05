@@ -15,10 +15,10 @@ function Section({
 }) {
   return (
     <section className="mt-8">
-      <h2 className="text-[18px] sm:text-[20px] font-bold tracking-wide text-black">
+      <h2 className="text-lg font-bold tracking-tight">
         {title}
       </h2>
-      <div className="mt-2 space-y-2 text-[12px] sm:text-[13px] leading-5 text-black/85">
+      <div className="">
         {children}
       </div>
     </section>
@@ -44,16 +44,13 @@ function EmailLine({
 
 export default function ContactPage() {
   return (
-    <main className="bg-white">
+    <main className="">
       {/* Page header spacing similar to mock */}
-      <div className="mx-auto w-full max-w-[980px] px-5 sm:px-6 pb-16 pt-10 sm:pt-12">
+      <div className="mx-auto w-full max-w-[980px] px-5 pt-4 pb-16 ">
         {/* Title */}
         <h1
           className="
-            text-center font-extrabold uppercase
-            tracking-[0.18em]
-            text-[22px] sm:text-[28px]
-            text-sky-500
+            contact-h1-blue
           "
         >
           Information
@@ -61,27 +58,27 @@ export default function ContactPage() {
 
         {/* Top sections */}
         <Section title="MEMBERSHIP">
-          <p>
+          <p className="contact-p-body">
             The San Diego Independent Film Society currently hosts several
             quarterly screening events in addition to their co-sponsoring of the
             San Diego Independent Film Festival, with a large Film Society
             membership and event expansion being planned for next year.
           </p>
-          <p>
+          <p className="contact-p-body">
             San Diego Independent Film Society Membership is currently drawn
             from San Diego film aficionados and film communities stemming from
             our local universities including the University of California San
             Diego (UCSD), San Diego State University (SDSU), San Diego Mesa
             College, and the University of San Diego (USD).
           </p>
-          <p>
+          <p className="contact-p-body">
             For info about the San Diego Independent Film Society,{" "}
             <Link className="text-sky-600 hover:underline" href="/mission">
               click here
             </Link>
             .
           </p>
-          <p>
+          <p className="contact-p-body">
             To attend the San Diego Independent Film Society events as an
             Official Film Society Member, or to support the Film Society efforts
             through an annual membership donation, please contact the Film
@@ -96,14 +93,14 @@ export default function ContactPage() {
         </Section>
 
         <Section title="PRESS + MEDIA INQUIRIES">
-          <p>
+          <p className="contact-p-body">
             Applications for Press &amp; Media Credentials begin each September.
             Professional Industry Accreditation requests are given out after
             tickets go on-sale each Fall. Stay tuned for future updates and
             announcements regarding upcoming opening dates for Media Credentials
             &amp; Professional Film Industry Accreditation applications.
           </p>
-          <p>
+          <p className="contact-p-body">
             For inquiries regarding press credentials, interview requests, or
             press photography, contact our Press Coordinator and Communications
             Departments via email at:{" "}
@@ -114,16 +111,16 @@ export default function ContactPage() {
         </Section>
 
         <Section title="GENERAL INQUIRIES">
-          <p className="font-semibold text-black/90">
+          <p className="contact-p-body">
             For the fastest responses to inquiries, we recommend the following:
           </p>
-          <p>
+          <p className="contact-p-body">
             For requests related to Film Society Membership, Press Credentials,
             Industry Requests, Volunteering, or Brand Partnership, Sponsorship
             and Advertising — visit the other sections on this page for specific
             contact information.
           </p>
-          <p>
+          <p className="contact-p-body">
             For inquiries about festival attendance, visit our website first and
             be sure to read our specific{" "}
             <Link className="text-sky-600 hover:underline" href="/festfaq">
@@ -132,7 +129,7 @@ export default function ContactPage() {
             as all popular questions about festival attendance are answered
             there.
           </p>
-          <p>
+          <p className="contact-p-body">
             For inquiries about submitting your film or screenplay to the
             festival, please make sure to read our{" "}
             <Link className="text-sky-600 hover:underline" href="/submissionfaq">
@@ -141,7 +138,7 @@ export default function ContactPage() {
             first, as all popular questions about submitting projects to the
             festival are answered there.
           </p>
-          <p>
+          <p className="contact-p-body">
             For inquiries regarding an already submitted film project, the best
             recommendation is to first reach out to your submission platform
             (FilmFreeway, etc.) for any issues with content uploading or
@@ -191,7 +188,7 @@ export default function ContactPage() {
         </Section>
 
         <Section title="ACCEPTED FILMMAKERS">
-          <p>
+          <p className="contact-p-body">
             For the fastest and most accurate replies, filmmakers who have been
             accepted to screen at the festival should reach out using the
             private email address provided at time of acceptance (for accepted
@@ -201,12 +198,12 @@ export default function ContactPage() {
         </Section>
 
         <Section title="SUGGESTIONS & RECOMMENDATIONS">
-          <p>
+          <p className="contact-p-body">
             While our volunteer staff is not able to reply to every question,
             request, recommendation, or suggestion, know that every email sent
             is read and thoughtfully considered.
           </p>
-          <p>
+          <p className="contact-p-body">
             Suggestions on how to make the festival better are always welcome.
             Feel free to email us with any suggestions at:{" "}
             <a

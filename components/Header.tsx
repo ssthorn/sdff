@@ -185,10 +185,8 @@ export default function Header() {
                       </SheetClose>
                     </div>
                   )}
-                </nav>
 
-                {/* SUBMIT CTA at bottom */}
-                {SUBMIT_CTA && (
+                  {SUBMIT_CTA && (
                   <div>
                     {SUBMIT_CTA.external ? (
                       <SheetClose asChild>
@@ -215,6 +213,36 @@ export default function Header() {
                     )}
                   </div>
                 )}
+                </nav>
+
+                {/* SUBMIT CTA at bottom */}
+                {/* {SUBMIT_CTA && (
+                  <div>
+                    {SUBMIT_CTA.external ? (
+                      <SheetClose asChild>
+                        <a
+                          href={SUBMIT_CTA.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="block w-full text-center px-4 py-6 text-3xl font-rowdies font-bold uppercase tracking-wide"
+                          style={{ backgroundColor: BLUE_MID, color: "white" }}
+                        >
+                          {SUBMIT_CTA.label}
+                        </a>
+                      </SheetClose>
+                    ) : (
+                      <SheetClose asChild>
+                        <Link
+                          href={SUBMIT_CTA.href}
+                          className="block w-full text-center px-4 py-4 text-[1.05rem] font-bold uppercase tracking-wide"
+                          style={{ backgroundColor: BLUE_MID, color: "white" }}
+                        >
+                          {SUBMIT_CTA.label}
+                        </Link>
+                      </SheetClose>
+                    )}
+                  </div>
+                )} */}
               </SheetContent>
             </Sheet>
           </div>

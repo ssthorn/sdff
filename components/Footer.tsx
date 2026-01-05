@@ -56,16 +56,16 @@ export default function Footer() {
   return (
     <footer
       style={{ backgroundColor: FOOTER_BG }}
-      className="mt-10 text-white font-istok"
+      className=" text-white "
     >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
         {/* Title */}
-        <h2 className="font-rowdies font-normal text-2xl sm:text-3xl md:text-4xl text-center mb-8">
+        <h2 className="font-rowdies font-normal text-xl md:text-4xl text-center mb-8">
           San Diego Independent Film Festival
         </h2>
 
         {/* Social icons */}
-        <div className="flex items-center justify-center gap-10 sm:gap-12 md:gap-16 mb-10">
+        <div className="flex items-center justify-center gap-14 md:gap-16 mb-8">
           <a
             href="#"
             aria-label="Instagram"
@@ -132,9 +132,9 @@ export default function Footer() {
         </div>
 
         {/* Footer columns */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-10 md:gap-16 text-[20px] sm:text-base">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-16 text-lg">
           {COLUMNS.map((col, colIndex) => (
-            <div key={colIndex} className="space-y-2.5 sm:space-y-3">
+            <div key={colIndex} className="space-y-1">
               {col.map((item) =>
                 item.external ? (
                   <a
