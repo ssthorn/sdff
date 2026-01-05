@@ -17,10 +17,10 @@ export default function FloatingMenuButton({
       onClick={onToggle}
       className={[
         "md:hidden",
-        "fixed right-4 top-4 z-50",
+        "fixed right-3 top-2 z-50",
         "h-12 w-12 rounded-full",
-        "bg-white/70 backdrop-blur",
-        "border border-black/15 shadow-lg",
+        "bg-white/70 backdrop-blur-soft",
+        " shadow-lg",
         "grid place-items-center",
         "transition-opacity duration-200",
         visible
@@ -28,7 +28,7 @@ export default function FloatingMenuButton({
           : "opacity-0 pointer-events-none",
       ].join(" ")}
     >
-      <span className="text-black text-[22px] leading-none">
+      <span className="text-black text-2xl leading-none">
         {open ? "✕" : "☰"}
       </span>
     </button>
