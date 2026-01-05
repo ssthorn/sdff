@@ -7,6 +7,7 @@ type HomeTile = {
   title: string;
   href: string;
   imageSrc: string;
+  external?: boolean;
 };
 
 const HOME_TILES: HomeTile[] = [
@@ -42,13 +43,14 @@ const HOME_TILES: HomeTile[] = [
   },
   {
     title: "Submit",
-    href: "www.filmfreeway.com",
+    href: "https://www.filmfreeway.com",
+    external: true,
     imageSrc:
       "/1d. HOME PAGE IMAGES (by section)/6. HP IMAGE Submit/6.) Submit.jpg",
   },
   {
     title: "Venues",
-    href: "/cinema",
+    href: "/cinemas",
     imageSrc:
       "/1d. HOME PAGE IMAGES (by section)/7. HP IMAGE Venues_/7.) venues.jpg",
   },
@@ -103,26 +105,44 @@ export default function HomePage() {
 
           {/* Tile grid */}
           <div className="grid gap-4 sm:gap-5 grid-cols-2 md:grid-cols-4">
-            {HOME_TILES.map((tile) => (
-              <Link
-                key={tile.title}
-                href={tile.href}
-                className="group flex flex-col items-center"
-              >
-                <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.18)] bg-black/5">
-                  <Image
-                    src={tile.imageSrc}
-                    alt={tile.title}
-                    fill
-                    className="object-cover transition-transform duration-200 group-hover:scale-[1.03]"
-                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 50vw"
-                  />
-                </div>
-                <p className="mt-2.5 text-xs sm:text-sm md:text-base font-rowdies font-normal uppercase tracking-normal text-center">
-                  {tile.title}
-                </p>
-              </Link>
-            ))}
+            {HOME_TILES.map((tile) => {
+              const TileContent = (
+                <>
+                  <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.18)] bg-black/5">
+                    <Image
+                      src={tile.imageSrc}
+                      alt={tile.title}
+                      fill
+                      className="object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 50vw"
+                    />
+                  </div>
+                  <p className="mt-2.5 text-xs sm:text-sm md:text-base font-rowdies font-normal uppercase tracking-normal text-center">
+                    {tile.title}
+                  </p>
+                </>
+              );
+
+              return tile.external ? (
+                <a
+                  key={tile.title}
+                  href={tile.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col items-center"
+                >
+                  {TileContent}
+                </a>
+              ) : (
+                <Link
+                  key={tile.title}
+                  href={tile.href}
+                  className="group flex flex-col items-center"
+                >
+                  {TileContent}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
