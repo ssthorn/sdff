@@ -134,7 +134,7 @@ export default function Header() {
                   <div className="divide-y divide-black">
                     {NAV_GROUPS.map((group) => (
                       <details key={group.key} className="group">
-                        <summary className="flex cursor-pointer items-center justify-between px-4 py-6 text-3xl font-rowdies font-normal uppercase tracking-wide">
+                        <summary className="flex cursor-pointer items-center justify-between px-4 py-4 text-2xl font-rowdies font-normal uppercase tracking-wide">
                           <span>{group.label}</span>
                           <ChevronDown
                             className="ml-2 h-4 w-4 shrink-0 transition-transform group-open:rotate-180"
@@ -148,14 +148,14 @@ export default function Header() {
                                 href={item.href}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="block px-6 py-4 text-[1.6rem] font-rowdies font-light normal-case leading-tight"
+                                className="block px-6 py-2 text-[1.2rem] font-rowdies font-light normal-case leading-tight"
                               >
                                 {item.label}
                               </a>
                             ) : (
                               <Link
                                 href={item.href}
-                                className="block px-6 py-4 text-[1.6rem] font-rowdies font-light normal-case leading-tight"
+                                className="block px-6 py-2 text-[1.2rem] font-rowdies font-light normal-case leading-tight"
                               >
                                 {item.label}
                               </Link>
@@ -178,7 +178,7 @@ export default function Header() {
                       <SheetClose asChild>
                         <Link
                           href={HOME_LINK.href}
-                          className="block px-4 py-6 text-3xl font-rowdies font-normal uppercase tracking-wide"
+                          className="block px-4 py-4 text-2xl font-rowdies font-normal uppercase tracking-wide"
                         >
                           {HOME_LINK.label}
                         </Link>

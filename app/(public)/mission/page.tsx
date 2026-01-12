@@ -1,18 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import MissionTitleBlock from "@/components/MissionTitleBlock";
 
 export default function MissionPage() {
   return (
     <main className="mission-page">
       {/* TITLE BLOCK */}
       <section className="mission-title-section">
-        <h1 className="mission-hero-title">
-          San Diego
-          <br />
-          Independent Film
-          <br />
-          Fest <span className="mission-hero-accent">Mission</span>
-        </h1>
+        <MissionTitleBlock accent="Mission" />
       </section>
 
       {/* IMAGE 1 – TROLLEY */}
@@ -82,13 +77,8 @@ export default function MissionPage() {
 
       {/* MEMBERSHIP / CINEMA SOCIETY */}
       <section className="mission-title-section">
-        <h1 className="mission-hero-title">
-          San Diego
-          <br />
-          Independent Film
-          <br />
-          Fest <span className="mission-hero-accent">Membership</span>
-        </h1>
+        {/* TITLE BLOCK */}
+        <MissionTitleBlock accent="Membership" />
       </section>
 
       <section className="mission-section mission-section-default">
@@ -139,13 +129,7 @@ export default function MissionPage() {
 
       {/* FESTIVAL NEWS / UPDATES */}
       <section className="mission-title-section">
-        <h1 className="mission-hero-title">
-          San Diego
-          <br />
-          Independent Film
-          <br />
-          Fest <span className="mission-hero-accent">News</span>
-        </h1>
+        <MissionTitleBlock accent="News" />
       </section>
 
       <section className="mission-section mission-section-default">
@@ -208,13 +192,7 @@ export default function MissionPage() {
 
       {/* CINEMAS */}
       <section className="mission-title-section">
-        <h1 className="mission-hero-title">
-          San Diego
-          <br />
-          Independent Film
-          <br />
-          Fest <span className="mission-hero-accent">Cinemas</span>
-        </h1>
+        <MissionTitleBlock accent="cinemas" />
       </section>
 
       <section className="mission-section mission-section-default">
@@ -258,13 +236,7 @@ export default function MissionPage() {
 
       {/* SUBMISSIONS / FILMFREEWAY */}
       <section className="mission-title-section">
-        <h1 className="mission-hero-title">
-          San Diego
-          <br />
-          Independent Film
-          <br />
-          Fest <span className="mission-hero-accent">Submissions</span>
-        </h1>
+        <MissionTitleBlock accent="submissions" />
       </section>
 
       <section className="mission-section mission-section-default">

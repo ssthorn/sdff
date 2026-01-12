@@ -1,18 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import MissionTitleBlock from "@/components/MissionTitleBlock";
 
 export default function FilmFestPage() {
   return (
     <main className="mission-page">
       {/* TITLE BLOCK */}
       <section className="mission-title-section">
-        <h1 className="mission-hero-title">
-          San Diego
-          <br />
-          Independent Film
-          <br />
-          Fest <span className="mission-hero-accent">Information</span>
-        </h1>
+        <MissionTitleBlock accent="information" />
       </section>
 
       {/* IMAGE 1 – SEATED GUESTS */}
@@ -107,13 +102,7 @@ export default function FilmFestPage() {
 
       {/* MEMBERSHIP */}
       <section className="mission-title-section">
-        <h1 className="mission-hero-title">
-          San Diego
-          <br />
-          Independent Film
-          <br />
-          Fest <span className="mission-hero-accent">Membership</span>
-        </h1>
+        <MissionTitleBlock accent="membership" />
       </section>
 
       <section className="filmfest-section pb-6">
@@ -165,13 +154,7 @@ export default function FilmFestPage() {
 
       {/* SUBMISSIONS */}
       <section className="mission-title-section">
-        <h1 className="mission-hero-title">
-          San Diego
-          <br />
-          Independent Film
-          <br />
-          Fest <span className="mission-hero-accent">Submissions</span>
-        </h1>
+        <MissionTitleBlock accent="submissions" />
       </section>
 
       <section className="filmfest-section pb-8">

@@ -157,7 +157,7 @@ body {
   }
 
   .mission-title-section {
-    @apply mx-auto flex justify-center max-w-7xl  lg:px-8 pt-8 pb-12;
+    @apply mx-auto flex justify-center max-w-7xl  lg:px-8 py-4;
   }
 
   .mission-section {
@@ -176,9 +176,9 @@ body {
   .mission-hero-title {
     @apply mx-6 md:mx-[20vw]
       font-rowdies font-light uppercase
-      leading-9 md:leading-13
+      
       text-[#00aaff]
-      text-4xl md:text-6xl;
+      text-5xl sm:text-6xl md:text-7xl;
   }
 
   .mission-hero-title--sub {
@@ -361,7 +361,7 @@ body {
     @apply h-auto w-[260px] sm:w-[260px] md:w-[500px];
   }
   .tourism-page-title {
-    @apply font-rowdies font-light text-center text-[2.2rem] sm:text-[2.7rem] md:text-[3rem] text-[#00aaff] uppercase mb-4;
+    @apply font-rowdies font-light text-center text-[2.2rem] sm:text-[2.7rem] md:text-[3rem] text-[#00aaff] uppercase;
   }
   .tourism-section-title {
     @apply font-rowdies font-light text-center text-[1.7rem] sm:text-[2rem] text-[#00aaff] uppercase mb-6;

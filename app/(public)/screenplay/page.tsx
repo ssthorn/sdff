@@ -400,13 +400,7 @@ export default function ScreenplayPage() {
           </div>
         </div>
 
-        {/* Small helper links (optional; remove if you don't want) */}
-        <div className="mt-8 text-center text-[11px] text-black/60">
-          Looking for tickets?{" "}
-          <Link href="/filmprogram" className="text-link">
-            Festival Film Program &amp; Event Guide
-          </Link>
-        </div>
+        
       </div>
     </main>
   );

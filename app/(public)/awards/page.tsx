@@ -122,19 +122,20 @@ export default function AwardsPage() {
         </div>
 
         {/* 6 small Official Selection laurels row */}
-        <div className="hidden mt-6 sm:mt-7 md:flex justify-center">
-          <div className="grid grid-cols-3 gap-x-3 gap-y-3 sm:grid-cols-6 sm:gap-x-4 sm:gap-y-0 items-center">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <LaurelLink
-                key={i}
-                filename={"sd laurels28 OFFICAL SELECTION.jpg"}
-                alt={`Official Selection small ${i + 1}`}
-                className="h-auto w-[86px] sm:w-[88px]"
-                sizes="88px"
-              />
-            ))}
-          </div>
-        </div>
+<div className="mt-6 sm:mt-7 flex justify-center">
+  <div className="grid grid-cols-6 gap-x-3 sm:gap-x-4 items-center">
+    {Array.from({ length: 6 }).map((_, i) => (
+      <LaurelLink
+        key={i}
+        filename="sd laurels28 OFFICAL SELECTION.jpg"
+        alt={`Official Selection small ${i + 1}`}
+        className="w-[72px] sm:w-[88px] h-auto"
+        sizes="88px"
+      />
+    ))}
+  </div>
+</div>
+
 
         {/* Award Categories */}
         <h1 className='uppercase italic  tracking-tight text-3xl md:text-4xl text-center mt-18'>
@@ -162,31 +163,36 @@ export default function AwardsPage() {
             sizes='(min-width: 1024px) 260px, 60vw'
           />
         </div>
-
-        {/* Best Actor / Actress (paired like mock) */}
-        <h1 className='awards-laurel-title'>
-          BEST ACTOR
-          <br />
-          BEST ACTRESS
-        </h1>
-        <div className='mt-2 grid grid-cols-1 md:grid-cols-2'>
-          <div className='flex justify-center'>
-            <LaurelLink
-              filename={"sd laurels3.jpg"}
-              alt='Best Actor'
-              className='awards-laurel-medium'
-              sizes='(min-width: 1024px) 200px, 45vw'
-            />
-          </div>
-          <div className='flex justify-center'>
-            <LaurelLink
-              filename={"sd laurels4.jpg"}
-              alt='Best Actress'
-              className='awards-laurel-medium'
-              sizes='(min-width: 1024px) 200px, 45vw'
-            />
-          </div>
+<section className="md:flex justify-center md:space-x-20 ">
+  <div>
+    {/* Best Actor */}
+        <h1 className='awards-laurel-title'>BEST Actor</h1>
+        <div className='flex justify-center'>
+          <LaurelLink
+            filename={"sd laurels3.jpg"}
+            alt='Best Actor'
+            className='awards-laurel-medium'
+            sizes='(min-width: 1024px) 200px, 45vw'
+          />
         </div>
+  </div>
+<div>
+{/* Best Actress */}
+        <h1 className='awards-laurel-title'>BEST ACTRESS</h1>
+        <div className='flex justify-center'>
+          <LaurelLink
+            filename={"sd laurels4.jpg"}
+            alt='Best Actress'
+            className='awards-laurel-medium'
+            sizes='(min-width: 1024px) 200px, 45vw'
+          />
+        </div>
+</div>
+        
+</section>
+        
+
+        
 
         {/* Best of San Diego */}
         <h1 className='awards-laurel-title'>BEST of SAN DIEGO</h1>
@@ -207,7 +213,7 @@ export default function AwardsPage() {
                 <LaurelLink
                   filename={"sd laurels6.jpg"}
                   alt='Best Drama'
-                  className='awards-laurel-small'
+                  className='awards-laurel-medium md:awards-laurel-small'
                   sizes='(min-width: 1024px) 260px, 60vw'
                 />
               </div>
@@ -219,7 +225,7 @@ export default function AwardsPage() {
                 <LaurelLink
                   filename={"sd laurels7.jpg"}
                   alt='Best Comedy'
-                  className='awards-laurel-small'
+                  className='awards-laurel-medium md:awards-laurel-small'
                   sizes='(min-width: 1024px) 260px, 60vw'
                 />
               </div>
@@ -231,7 +237,7 @@ export default function AwardsPage() {
                 <LaurelLink
                   filename={"sd laurels8.jpg"}
                   alt='Best Documentary'
-                  className='awards-laurel-small'
+                  className='awards-laurel-medium md:awards-laurel-small'
                   sizes='(min-width: 1024px) 260px, 60vw'
                 />
               </div>
@@ -243,7 +249,7 @@ export default function AwardsPage() {
                 <LaurelLink
                   filename={"sd laurels9.jpg"}
                   alt='Best Animation'
-                  className='awards-laurel-small'
+                  className='awards-laurel-medium md:awards-laurel-small'
                   sizes='(min-width: 1024px) 260px, 60vw'
                 />
               </div>
@@ -288,6 +294,20 @@ export default function AwardsPage() {
             />
           </div> */}
         </div>
+        {/* 6 small Official Selection laurels row */}
+<div className="mt-6 sm:mt-7 flex justify-center">
+  <div className="grid grid-cols-6 gap-x-3 sm:gap-x-4 items-center">
+    {Array.from({ length: 6 }).map((_, i) => (
+      <LaurelLink
+        key={i}
+        filename="sd laurels28 OFFICAL SELECTION.jpg"
+        alt={`Official Selection small ${i + 1}`}
+        className="w-[72px] sm:w-[88px] h-auto"
+        sizes="88px"
+      />
+    ))}
+  </div>
+</div>
         <section id='Genres2'>
           <div className="grid grid-cols-1 md:grid-cols-4">
             <div>
@@ -296,7 +316,7 @@ export default function AwardsPage() {
                 <LaurelLink
                   filename={"sd laurels10.jpg"}
                   alt='Best Thriller'
-                  className='awards-laurel-small'
+                  className='awards-laurel-medium md:awards-laurel-small'
                   sizes='(min-width: 1024px) 260px, 60vw'
                 />
               </div>
@@ -308,7 +328,7 @@ export default function AwardsPage() {
                 <LaurelLink
                   filename={"sd laurels11.jpg"}
                   alt='Best Horror'
-                  className='awards-laurel-small'
+                  className='awards-laurel-medium md:awards-laurel-small'
                   sizes='(min-width: 1024px) 260px, 60vw'
                 />
               </div>
@@ -320,7 +340,7 @@ export default function AwardsPage() {
                 <LaurelLink
                   filename={"sd laurels12.jpg"}
                   alt='Best Experimental'
-                  className='awards-laurel-small'
+                  className='awards-laurel-medium md:awards-laurel-small'
                   sizes='(min-width: 1024px) 260px, 60vw'
                 />
               </div>
@@ -337,7 +357,7 @@ export default function AwardsPage() {
                 <LaurelLink
                   filename={"sd laurels13.jpg"}
                   alt='Best Episodic'
-                  className='awards-laurel-small'
+                  className='awards-laurel-medium md:awards-laurel-small'
                   sizes='(min-width: 1024px) 260px, 60vw'
                 />
               </div>
@@ -496,7 +516,7 @@ export default function AwardsPage() {
               <LaurelLink
                 filename={"sd laurels23.jpg"}
                 alt='Best Horror'
-                className='awards-laurel-small'
+                className='awards-laurel-medium md:awards-laurel-small'
                 sizes='(min-width: 1024px) 260px, 60vw'
               />
             </div>

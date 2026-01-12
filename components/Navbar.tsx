@@ -84,7 +84,7 @@ export default function Navbar() {
                   className='
                     block
                     px-3 py-1.5
-                    text-[11px] lg:text-xs
+                    text-xs lg:text-xs
                     font-light
                     leading-tight
                     whitespace-nowrap

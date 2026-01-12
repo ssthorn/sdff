@@ -142,7 +142,7 @@ export default function FestFaqPage() {
                   A curated selection of independent films from all around the
                   world, released during the current festival season.
                 </p>
-                <p className="mt-3">
+                <p className="mt-2">
                   Films screening at the festival have either been acquired by
                   the festival programmers and curators, or had been submitted
                   for review by our San Diego Film Society Membership and judged
@@ -172,7 +172,7 @@ export default function FestFaqPage() {
                   Screenings often begin promptly at the listed start time,
                   without trailers or pre-show content.
                 </p>
-                <p className="mt-3">
+                <p className="mt-2">
                   Make sure to plan to arrive, park, get concessions, and be in
                   your seat at the exact time listed on your ticket to make sure
                   you see the whole film.
@@ -210,13 +210,13 @@ export default function FestFaqPage() {
                   before or after the film. As often as can be accomplished, the
                   festival does try to have Q&amp;A events.
                 </p>
-                <p className="mt-3">
+                <p className="mt-2">
                   Feature Films with high attendance very often have Q&amp;A’s.
                   Short Films often screen in programming blocks containing many
                   films (which can create logistical and audience issues that
                   can complicate or negate Q&amp;A possibilities.)
                 </p>
-                <p className="mt-3">
+                <p className="mt-2">
                   Q&amp;A availability always depends on multiple factors
                   including filmmaker requests, guest speaker attendance, host
                   attendance and availability, audience size, and festival &amp;
@@ -251,7 +251,7 @@ export default function FestFaqPage() {
                   in order to best secure your spot and to avoid potential
                   ticketing sell-outs.
                 </p>
-                <p className="mt-3">
+                <p className="mt-2">
                   Tickets go on-sale generally about 3–10 weeks prior to the
                   festival dates. Information about where to buy tickets will be
                   released on our festival website and on our social media
@@ -277,25 +277,28 @@ export default function FestFaqPage() {
             a: (
               <>
                 <p>
-                  Some events do sell out with no more tickets available.
-                  However, in some instances additional tickets may be released
-                  at the door due to an additional screening or a move to a
-                  larger venue.
+                  Some events do sell out with no more tickets available. However, In some
+instances additional tickets may be released at the door due to an additional
+screening or a move to a larger venue.
                 </p>
-                <p className="mt-3">
-                  Any additional tickets released on-sale or additional
-                  screenings will be announced online (and by email to
-                  filmmakers), as well as on our social media accounts.
+                <p className="mt-2">
+                  While this will not always be the case, it can occur. In such cases any additional
+tickets released on-sale or additional screenings will be announced online (and
+by email to filmmakers), as well as on our social media accounts.
                 </p>
-                <p className="mt-3">
-                  Additionally, festival attendees may contact Box Office Staff
-                  in person (45 minutes prior to the start of any sold-out
-                  screening or event) to inquire about last minute rush tickets.
-                  Availability varies and is not guaranteed.
+                <p className="mt-2">
+                  Additionally, all festival attendees are free to contact our Box Office Staff in
+person (45 minutes prior to the start of any sold-out screening or event) to inquire
+about last minute rush tickets. But note that any such last minute availability
+varies from screening to screening, and the presence of additional will-call
+tickets, additional door tickets, or additional seats being released is not
+guaranteed.
                 </p>
-                <p className="mt-3">
-                  If there is a film you truly must see in person, it is highly
-                  recommended to purchase tickets as soon as possible.
+                <p className="mt-2">
+                  Sold Out may simply mean that an event or film screening is fully Sold Out (with
+no additional seats available). So, when there is a film you truly must see in
+person, it is highly recommended to purchase tickets to that exact screening or
+event, <span className="font-semibold">as soon as possible.</span>
                 </p>
               </>
             ),
@@ -309,11 +312,10 @@ export default function FestFaqPage() {
             a: (
               <>
                 <p>Yes, individual tickets for screenings are available.</p>
-                <p className="mt-3">
-                  For screening blocks containing multiple films (short films are
-                  often screened in programming blocks with other shorts), the
-                  festival kindly asks that you stay for the entire programming
-                  block to avoid disrupting the event.
+                <p className="mt-2">
+                  However, for screening blocks containing multiple films (short films are often
+screened in programming blocks with other shorts), the festival kindly asks that
+you stay for the entire programming block of films, to avoid disrupting the event.
                 </p>
               </>
             ),
@@ -335,12 +337,12 @@ export default function FestFaqPage() {
                   Refunds are not available for tickets purchased to attend any
                   screenings or events taking place at the festival.
                 </p>
-                <p className="mt-3">
+                <p className="mt-2">
                   If you miss your screening, the ticket was still held from
                   being sold. The festival cannot refund tickets for missed
                   screenings or changed plans.
                 </p>
-                <p className="mt-3 font-semibold">All ticket and pass sales are final. No Refunds.</p>
+                <p className="mt-2 font-semibold">All ticket and pass sales are final. No Refunds.</p>
               </>
             ),
           },
@@ -408,14 +410,20 @@ export default function FestFaqPage() {
             a: (
               <>
                 <p>
-                  High-profile attendees have attended festival screenings in
-                  the past, but festival participation always depends on
-                  individual schedules.
+                  High-profile attendees have attended festival screenings in the past, but note that
+festival participation always depends on individual schedules and our celebrity
+filmmakers and alumni are not guaranteed to attend screenings or events, but it
+is always a thrill when they do!
                 </p>
-                <p className="mt-3">
-                  High-profile guests often appear unannounced, or are announced
-                  very close to event dates. Guest appearances are not
-                  guaranteed and are always subject to last minute cancellation.
+                <p className="mt-2">
+                  High-profile guests often appear unannounced, or are announced very close to
+our actual event or screening dates at the last minute. This is due to the festival
+wanting to ensure there are no prior or last minute scheduling commitments for
+our high-profile guests before such appearances are announced to the public.
+                </p>
+                <p className="mt-2">
+                  Even with this precaution please note that guest appearances are not
+guaranteed and are always subject to last minute cancellation.
                 </p>
               </>
             ),
@@ -428,7 +436,7 @@ export default function FestFaqPage() {
                   Business Casual attire would be recommended for most festival
                   events. For more formal occasions, dress to impress.
                 </p>
-                <p className="mt-3">
+                <p className="mt-2">
                   For film screenings, Casual to Business Casual attire is the
                   general norm.
                 </p>
@@ -445,21 +453,20 @@ export default function FestFaqPage() {
             a: (
               <>
                 <p>Phone use is not allowed during film screenings.</p>
-                <p className="mt-3">
-                  All photography and video recording (including phone audio and
-                  video recording and photography) is prohibited during
-                  screenings and prohibited in all movie theaters and screening
-                  rooms.
+                <p className="mt-2">
+                  All Photography and video recording (including phone audio and video recording
+and photography) is prohibited during screenings and prohibited in all movie
+theaters and screening rooms.
                 </p>
-                <p className="mt-3">
-                  Failure to comply will lead to expulsion from festival events
-                  and screenings. This rule is to make sure the films screened
-                  are not pirated and our venues are firm on this issue.
+                <p className="mt-2">
+                  Failure to comply with this rule will lead to expulsion from the festival events and
+screenings. This rule is to make sure the films screened are not pirated and the
+festival and our venues are firm on this issue.
                 </p>
-                <p className="mt-3">
-                  Professional photography requires prior application and
-                  approval by the Festival Publicity Department as well as
-                  property ownership.
+                <p className="mt-2">
+                  Professional photography taking place at any part of the festival, red carpet, or
+screening space requires prior application and approval by the Festival Publicity
+Department as well as property ownership.
                 </p>
               </>
             ),
@@ -537,7 +544,7 @@ export default function FestFaqPage() {
           <h1 className="faq-h1-black">
             Festival Attendance
           </h1>
-          <p className=" text-black text-xl">
+          <p className=" text-black text-lg mb-6">
             Frequently Asked Questions
           </p>
         </div>

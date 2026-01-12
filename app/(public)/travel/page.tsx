@@ -41,7 +41,7 @@ const SECTIONS: Section[] = [
       {
         title: "Highways",
         href: "https://highways.dot.gov/highway-history/interstate-system",
-        displayUrl: "highways.dot.gov/highway-history/interstate-system",
+        displayUrl: "Highways",
         description:
           "The I-5, I-8, I-805 and I-15 interstate highways all connect to San Diego",
         imgSrc: "/travel/2.) Highways.png",

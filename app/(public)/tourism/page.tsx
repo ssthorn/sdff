@@ -117,8 +117,8 @@ const PLACES: TourismPlace[] = [
     imageSrc: "/5. _tourism IMAGES/7.) Balboa TowerNEWM.JPG",
     imageAlt: "California Tower in Balboa Park",
     description:
-      "The California Tower, a majestic landmark within San Diego&;aposs Balboa Park, is a stunning example of Spanish Colonial architecture.",
-    url: "https://www.balboapark.org/",
+      "The California Tower, a majestic landmark within San Diego's Balboa Park, is a stunning example of Spanish Colonial architecture.",
+    url: "https://balboapark.org",
     address: "1350 El Prado San Diego, CA 92101",
   },{
     id: "san-diego-independent-film-fest",
@@ -128,7 +128,7 @@ const PLACES: TourismPlace[] = [
     imageSrc: "/5. _tourism IMAGES/8.) SDIFF.jpg",
     imageAlt: "San Diego Independent Film Festival",
     description:
-      "The biggest and best celebration of independent film in San Diego, showcasing emerging filmmakers and groundbreaking cinema.",
+      "The biggest and best celebration of independent film in San Diego!",
     url: "https://sandiegoindependentfilmfestival.com",
     address: "San Diego, CA",
   },
@@ -368,8 +368,8 @@ const PLACES: TourismPlace[] = [
         imageSrc: "/5. _tourism IMAGES/27.) El Campo Cemetery.jpg",
         imageAlt: "El Campo Santo Cemetery in Old Town",
         description:
-          "A historic cemetery dating back to 1849, final resting place of many early settlers—later partly paved over, inspiring local ghost stories and legends.",
-        url: "https://hiddensandiego.com/el-campo-santo-cemetery",
+          "A historic and fascinating site located in San Diego's Old Town. Dating back to 1849, this cemetery is the final resting place for many of the city's early settlers and pioneers. In the late 19th century, a streetcar line and a road were built directly through a portion of it, paving over graves and leading to numerous tales of ghostly hauntings.",
+        url: "https://ohp.parks.ca.gov/ListedResources/Detail/68",
         address: "2410 San Diego Ave, San Diego, CA 92110",
       },
     
@@ -435,8 +435,8 @@ const PLACES: TourismPlace[] = [
         imageSrc: "/5. _tourism IMAGES/32.) Ocean Beach.jpg",
         imageAlt: "Ocean Beach shoreline and pier",
         description:
-          "San Diego’s bohemian beach town with a free-spirited vibe, surf culture, and Dog Beach—a beloved off-leash haven for pups.",
-        url: "https://sandiego.com/listing/ocean-beach",
+          "San Diego's quintessential laid-back, bohemia beach town. This community has a distinct, free-spirited vibe that sets it apart from its neighbors. For dog lovers, the famous Dog Beach at the northern end of the strand is a must-visit, offering a rare off-leash paradise for four-legged friends.",
+        url: "https://oceanbeachsandiego.com",
         address: "1950 Abott St, San Diego, CA 92107",
       },
       {
@@ -462,8 +462,8 @@ const PLACES: TourismPlace[] = [
           "/5. _tourism IMAGES/34.) Mission_Bay_Park_Sunset,_San_Dieg.jpg",
         imageAlt: "Mission Bay Park at sunset",
         description:
-          "A sprawling bayside park with coves, inlets, and waterfront paths ideal for biking, picnics, and relaxing by the water.",
-        url: "https://www.sandiego.org/mission-bay-park",
+          "With numerous coves, inlets, and trails, it provides a perfect setting for a variety of activities, from a leisurely bike ride along the waterfront to a family picnic in a designated park area.",
+        url: "https://www.sandiego.gov/park-and-recreation/parks/regional/missionbay",
         address: "Mission Bay Park, San Diego, CA 92109",
       },
       {
@@ -550,8 +550,8 @@ const PLACES: TourismPlace[] = [
         imageSrc: "/5. _tourism IMAGES/41.) Surfing.jpg",
         imageAlt: "Surfer riding a wave in San Diego",
         description:
-          "San Diego’s surf breaks range from beginner-friendly waves at La Jolla Shores and Pacific Beach to world-class spots like Black’s Beach and Windansea.",
-        url: "https://www.surfline.com/travel/san-diego-surfing-and-beaches",
+          "San Diego's surf culture is as iconic as its beaches, offering a wave for every skill level. From the gentle, rolling swells of La Jolla Shores and Pacific Beach, which are perfect for beginners and those taking their first lesson, to the powerful, world-class breaks at Black's Beach and Windansea for experienced surfers, there's a spot for everyone to",
+        url: "https://www.sandiego.gov/lifeguards/beaches",
         address: "San Diego, CA",
       },
       {

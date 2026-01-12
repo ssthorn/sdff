@@ -63,21 +63,21 @@ export default function ContactPage() {
             quarterly screening events in addition to their co-sponsoring of the
             San Diego Independent Film Festival, with a large Film Society
             membership and event expansion being planned for next year.
-          </p>
+          </p><br />
           <p className="contact-p-body">
             San Diego Independent Film Society Membership is currently drawn
             from San Diego film aficionados and film communities stemming from
             our local universities including the University of California San
             Diego (UCSD), San Diego State University (SDSU), San Diego Mesa
             College, and the University of San Diego (USD).
-          </p>
+          </p><br />
           <p className="contact-p-body">
             For info about the San Diego Independent Film Society,{" "}
             <Link className="text-sky-600 hover:underline" href="/mission">
               click here
             </Link>
             .
-          </p>
+          </p><br />
           <p className="contact-p-body">
             To attend the San Diego Independent Film Society events as an
             Official Film Society Member, or to support the Film Society efforts
@@ -99,7 +99,7 @@ export default function ContactPage() {
             tickets go on-sale each Fall. Stay tuned for future updates and
             announcements regarding upcoming opening dates for Media Credentials
             &amp; Professional Film Industry Accreditation applications.
-          </p>
+          </p><br className="contact-p-body" />
           <p className="contact-p-body">
             For inquiries regarding press credentials, interview requests, or
             press photography, contact our Press Coordinator and Communications
@@ -113,13 +113,13 @@ export default function ContactPage() {
         <Section title="GENERAL INQUIRIES">
           <p className="contact-p-body">
             For the fastest responses to inquiries, we recommend the following:
-          </p>
+          </p><br />
           <p className="contact-p-body">
             For requests related to Film Society Membership, Press Credentials,
             Industry Requests, Volunteering, or Brand Partnership, Sponsorship
             and Advertising — visit the other sections on this page for specific
             contact information.
-          </p>
+          </p><br />
           <p className="contact-p-body">
             For inquiries about festival attendance, visit our website first and
             be sure to read our specific{" "}
@@ -128,7 +128,7 @@ export default function ContactPage() {
             </Link>{" "}
             as all popular questions about festival attendance are answered
             there.
-          </p>
+          </p><br />
           <p className="contact-p-body">
             For inquiries about submitting your film or screenplay to the
             festival, please make sure to read our{" "}
@@ -137,18 +137,25 @@ export default function ContactPage() {
             </Link>{" "}
             first, as all popular questions about submitting projects to the
             festival are answered there.
-          </p>
+          </p><br />
           <p className="contact-p-body">
             For inquiries regarding an already submitted film project, the best
             recommendation is to first reach out to your submission platform
             (FilmFreeway, etc.) for any issues with content uploading or
             revision, as that usually would be the most efficient protocol.
-          </p>
-          <EmailLine
-            label="For general festival inquiries, including ticketing issues occurring during the festival screening days and dates — contact the festival via email at:"
-            email="office@sdiff.film"
-          />
-        </Section>
+          </p><br />
+          <p className="contact-p-body">
+  For general festival inquiries, including ticketing issues occurring during the
+  festival screening days and dates - contact the festival via email at{" "}
+  <a
+    href="mailto:office@sdiff.film"
+    className=""
+  >
+    office@sdiff.film
+  </a>
+</p>
+
+        </Section><br />
 
         {/* Big photo break */}
         <div className="mt-10 sm:mt-12">
@@ -166,26 +173,39 @@ export default function ContactPage() {
         </div>
 
         {/* Bottom sections */}
-        <Section title="INDUSTRY REQUESTS">
-          <EmailLine
-            label="All major studio, distributor, and industry inquiries regarding festival programming screeners or attendance requests may reach out to our festival team at:"
-            email="industry@sdiff.film"
-          />
-        </Section>
+<Section title="INDUSTRY REQUESTS">
+  <p className="contact-p-body">
+    All major studio, distributor, and industry inquiries regarding festival
+    programming screeners or attendance requests may reach out to our festival
+    team at{" "}
+    <a href="mailto:industry@sdiff.film">
+      industry@sdiff.film
+    </a>
+    .
+  </p>
+</Section>
 
-        <Section title="PARTNERSHIP OPPORTUNITIES">
-          <EmailLine
-            label="For brand partnership, sponsorship, or advertising opportunities, please contact the festival at:"
-            email="sponsorships@sdiff.film"
-          />
-        </Section>
+<Section title="PARTNERSHIP OPPORTUNITIES">
+  <p className="contact-p-body">
+    For brand partnership, sponsorship, or advertising opportunities, please
+    contact the festival at{" "}
+    <a href="mailto:sponsorships@sdiff.film">
+      sponsorships@sdiff.film
+    </a>
+    .
+  </p>
+</Section>
 
-        <Section title="VOLUNTEERING">
-          <EmailLine
-            label="For inquiries about volunteering at the festival please email us at:"
-            email="volunteer@sdiff.film"
-          />
-        </Section>
+<Section title="VOLUNTEERING">
+  <p className="contact-p-body">
+    For inquiries about volunteering at the festival please email us at{" "}
+    <a href="mailto:volunteer@sdiff.film">
+      volunteer@sdiff.film
+    </a>
+    .
+  </p>
+</Section>
+
 
         <Section title="ACCEPTED FILMMAKERS">
           <p className="contact-p-body">
@@ -202,7 +222,7 @@ export default function ContactPage() {
             While our volunteer staff is not able to reply to every question,
             request, recommendation, or suggestion, know that every email sent
             is read and thoughtfully considered.
-          </p>
+          </p><br />
           <p className="contact-p-body">
             Suggestions on how to make the festival better are always welcome.
             Feel free to email us with any suggestions at:{" "}
