@@ -229,20 +229,17 @@ export default function FestFaqPage() {
             a: (
               <>
                 <p>
-                  All submissions must include an online screener uploaded
-                  through
+                  All film submissions must include an online screener to be uploaded through
                   <a href='https://www.filmfreeway.com' className='text-link'>
                     FilmFreeway
                   </a>{" "}
-                  for judging and review.
+                  for festival judging and review.
                 </p>
                 <p className='mt-2'>
-                  Physical media such as DVDs or Blu-rays are not accepted.
+                  The festival cannot accept physical media such as DVDs or Blu-rays. 
                 </p>
                 <p className='mt-2'>
-                  It is the submitter’s responsibility to ensure that all
-                  screener links remain active and viewable from submission
-                  through final judging notifications.
+                  It is the submitters responsibility to ensure the screener link and full film remains active and viewable from the first day of submission, through the final deadline, and until the final judging announcements are made.
                 </p>
               </>
             ),
@@ -324,11 +321,10 @@ export default function FestFaqPage() {
             a: (
               <>
                 <p>
-                  Each unique submission must be filed separately through
-                  FilmFreeway, including its own fee. One project’s acceptance
-                  to the festival has no bearing on the judging status of any
-                  other separately submitted project.
+                  You may submit multiple projects, provided each one adheres to our guidelines.
                 </p>
+                <p className="mt-2">
+Each unique submission must be filed separately through FilmFreeway, including its own fee. One project’s acceptance to the festival has no bearing on the judging status of any other separately submitted project.                </p>
               </>
             ),
           },
@@ -408,6 +404,25 @@ export default function FestFaqPage() {
                   assistant, etc.: You must have the filmmaker and any rights
                   holders explicit permissions and provide their contact details
                   in order to submit to our festival.
+                </p>
+              </>
+            ),
+          },
+          {
+            q: "Feedback?",
+            a: (
+              <>
+                <p>
+                  Due to the high volume of submissions and the logical costs
+                  involved; individual feedback is not provided for film or
+                  screenplay submissions.
+                </p>
+                <p className='mt-2'>
+                  Additional Screenplay Feedback & Judging Review notes that are
+                  edited and prepared for submitters may be available for
+                  additional fees - check our current submission platform page
+                  to see if such services are available and the current fees
+                  involved.
                 </p>
               </>
             ),
@@ -534,25 +549,7 @@ export default function FestFaqPage() {
               </p>
             ),
           },
-          {
-            q: "Feedback?",
-            a: (
-              <>
-                <p>
-                  Due to the high volume of submissions and the logical costs
-                  involved; individual feedback is not provided for film or
-                  screenplay submissions.
-                </p>
-                <p className='mt-2'>
-                  Additional Screenplay Feedback & Judging Review notes that are
-                  edited and prepared for submitters may be available for
-                  additional fees - check our current submission platform page
-                  to see if such services are available and the current fees
-                  involved.
-                </p>
-              </>
-            ),
-          },
+          
           {
             q: "Festival Acceptance?",
             a: (

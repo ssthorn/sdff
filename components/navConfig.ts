@@ -31,6 +31,7 @@ export const NAV_GROUPS: NavGroup[] = [
     label: "Visit San Diego",
     links: [
       { label: "S.D. Tourism", href: "/tourism" },
+      { label: "S.D. Cinemas", href: "/cinemas" },
       { label: "Restaurants", href: "/restaurants" },
       { label: "Hotels & Lodging", href: "/hotels" },
       { label: "Travel & Transport", href: "/travel" },
@@ -41,9 +42,9 @@ export const NAV_GROUPS: NavGroup[] = [
     label: "SD Film",
     links: [
       { label: "Mission", href: "/mission" },
-      { label: "S.D. Cinemas", href: "/cinemas" },
       { label: "Film Awards", href: "/awards" },
       { label: "Press & Industry", href: "/contact" },
+      { label: "Film Society Events", href: "/coronadoindependentfilmfest" },
       { label: "Membership", href: "/mission" },
     ],
   },

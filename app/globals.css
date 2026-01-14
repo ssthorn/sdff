@@ -412,10 +412,10 @@ body {
     @apply text-xs leading-3.5 tracking-tight; 
   }
   .coronado-h1-blue {
-    @apply font-rowdies font-light text-center text-3xl text-[#00aaff] uppercase;
+    @apply font-rowdies font-light text-center text-6xl text-[#00aaff] uppercase mb-6;
   }
   .coronado-p-body {
-    @apply max-w-[90vw] text-base tracking-tight text-center leading-4.5;
+    @apply max-w-[90vw] text-base tracking-tight text-center leading-4.5 my-6;
   }
   .text-link {
     @apply text-cyan-700 hover:underline;
@@ -423,6 +423,23 @@ body {
   .faq-h1-black {
     @apply font-rowdies uppercase font-light text-3xl tracking-tight;
   }
+  .mission-hero-title--wide {
+  @apply mx-6 md:mx-[12vw];
+}
+/* Coronado: keep the SAME 3-line breaks, but shrink slightly on small screens
+   so the last line never wraps or blows out the layout. */
+.mission-hero-title--coronado {
+  font-size: clamp(2.25rem, 9vw, 3rem);
+}
+
+/* Once you hit sm/md, fall back to your existing sizing ladder */
+@media (min-width: 640px) {
+  .mission-hero-title--coronado {
+    font-size: inherit;
+  }
+}
+
+
 }
 
 
