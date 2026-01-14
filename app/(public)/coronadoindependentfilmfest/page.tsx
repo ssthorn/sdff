@@ -6,14 +6,15 @@ export default function CoronadoIndependentFilmFestPage() {
     <main className="mission-page">
       {/* TITLE BLOCK (same structure as Mission) */}
       <header className="mission-title-section">
-  <h1 className="mission-hero-title mission-hero-title--wide">
+  <h1 className="mission-hero-title mission-hero-title--coronado">
     <span className="block">INDEPENDENT</span>
     <span className="block">FILM SCREENINGS</span>
-    <span className="mission-hero-accent whitespace-nowrap block">
+    <span className="mission-hero-accent block whitespace-nowrap">
       CORONADO ISLAND
     </span>
   </h1>
 </header>
+
 
 
 
